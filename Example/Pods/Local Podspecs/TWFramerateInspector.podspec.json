@@ -1,0 +1,29 @@
+{
+  "name": "TWFramerateInspector",
+  "version": "0.1.0",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "summary": "",
+  "description": "",
+  "homepage": "https://github.com/tapwork/TWFramerateInspector",
+  "social_media_url": "https://twitter.com/cmenschel",
+  "authors": {
+    "Christian Menschel": "christian@tapwork.de"
+  },
+  "source": {
+    "git": "https://github.com/tapwork/TWFramerateInspector.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source_files": "Classes/**.{h,m}",
+  "requires_arc": true,
+  "dependencies": {
+    "YourStatusBar": [
+      "~> 1.0.0"
+    ]
+  }
+}

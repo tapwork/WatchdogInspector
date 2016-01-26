@@ -1,0 +1,17 @@
+PODS:
+  - TWFramerateInspector (0.1.0):
+    - YourStatusBar (~> 1.0.0)
+  - YourStatusBar (1.0.1)
+
+DEPENDENCIES:
+  - TWFramerateInspector (from `../TWFramerateInspector.podspec`)
+
+EXTERNAL SOURCES:
+  TWFramerateInspector:
+    :path: "../TWFramerateInspector.podspec"
+
+SPEC CHECKSUMS:
+  TWFramerateInspector: 7b0f7c4369ab24699f3116864870ce4e8e5cf27c
+  YourStatusBar: 8fe2e308865c97018565e57da6dab1a17d4fdf25
+
+COCOAPODS: 0.39.0

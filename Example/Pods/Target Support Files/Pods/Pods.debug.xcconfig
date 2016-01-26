@@ -1,0 +1,5 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/TWFramerateInspector" "${PODS_ROOT}/Headers/Public/YourStatusBar"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/TWFramerateInspector" -isystem "${PODS_ROOT}/Headers/Public/YourStatusBar"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"TWFramerateInspector" -l"YourStatusBar"
+PODS_ROOT = ${SRCROOT}/Pods
