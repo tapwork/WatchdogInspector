@@ -6,6 +6,8 @@
 
 #####FramerateInspector ...
 
+WORK in progress
+
 #### Features
 * Shows the current framerate
 
