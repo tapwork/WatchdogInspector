@@ -15,16 +15,30 @@ static CFRunLoopObserverRef kObserverRef;
 static CFTimeInterval kLoopTimeEntry = 0.0;
 static UILabel *kTextLabel = nil;
 
+
+//static int frameCounter = 0;
+//static CFTimeInterval measureEverySeconds = 5.0;
+//static CFTimeInterval lastMeasure = 0;
+//static CFTimeInterval measuredWorkingTime = 0;
+
 @implementation TWFramerateInspector
 
 static void runloopObserverCallback(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info)
 {
     if (activity == kCFRunLoopAfterWaiting) {
         kLoopTimeEntry = CACurrentMediaTime();
-    } else if (activity == kCFRunLoopBeforeWaiting) {
-        CFTimeInterval time = CACurrentMediaTime() - kLoopTimeEntry;
-        double fps = 1/time;
-        if (fps <= 60 && fps >= 1) {
+        NSLog(@"====================");
+        NSLog(@"entry %.5f", kLoopTimeEntry);
+    } else if (activity == kCFRunLoopBeforeWaiting && kLoopTimeEntry > 0) {
+        CFTimeInterval exitTime = CACurrentMediaTime();
+        CFTimeInterval workingTime = (exitTime - kLoopTimeEntry);
+        double fps = 1/workingTime;
+        NSLog(@"exit %.5f", exitTime);
+        NSLog(@"workingTime %.5f", workingTime);
+        NSLog(@"fps %.2f", fps);
+        NSLog(@"====================");
+
+        if (fps > 1 && fps <= 1/60) {
             updateColorWithFramerate(fps);
         }
     } else if (activity == kCFRunLoopExit) {
