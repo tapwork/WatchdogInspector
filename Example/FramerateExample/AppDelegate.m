@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import <TWFramerateInspector/TWFramerateInspector.h>
+#import <FramerateInspector/TWFramerateInspector.h>
 
 @interface AppDelegate ()
 
