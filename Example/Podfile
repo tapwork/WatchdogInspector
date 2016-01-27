@@ -1,1 +1,1 @@
-pod "TWFramerateInspector", :path => "../TWFramerateInspector.podspec"
+pod "FramerateInspector", :path => "../FramerateInspector.podspec"
