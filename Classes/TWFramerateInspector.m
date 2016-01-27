@@ -37,12 +37,12 @@ static void updateColorWithFramerate(double framerate)
     //fade from green to red
     double n = 1 - (framerate/60);
     double red = (255 * n);
-    double green = (255 * (1 - n));
+    double green = (255 * (1 - n)/2);
     double blue = 0;
     UIColor *color = [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:1.0];
     if (framerate > 0.0) {
         kTextLabel.backgroundColor = color;
-        kTextLabel.text = [NSString stringWithFormat:@"Framerate: %.2f", framerate];
+        kTextLabel.text = [NSString stringWithFormat:@"fps: %.2f", framerate];
     } else {
         kTextLabel.backgroundColor = [UIColor lightGrayColor];
         kTextLabel.text = nil;
