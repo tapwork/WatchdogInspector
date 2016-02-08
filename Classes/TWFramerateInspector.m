@@ -16,6 +16,7 @@ static double kBestFramerate = 60.0;
 static UILabel *kTextLabel = nil;
 static int kNumberOfFrames = 0;
 static CFTimeInterval kUpdateWatchdogInterval = 2.0;
+static CFTimeInterval kWatchdogTreshholdTimeInterval = 0.2;
 static dispatch_source_t kWatchdogTimer;
 
 @implementation TWFramerateInspector
@@ -110,8 +111,13 @@ static void updateColorWithFramerate(double framerate)
                                              double fps = kNumberOfFrames/kUpdateWatchdogInterval;
                                              kNumberOfFrames = 0;
                                              NSLog(@"fps %.2f", fps);
+                                             CFTimeInterval startTime = CACurrentMediaTime();
                                              dispatch_async(dispatch_get_main_queue(), ^{
                                                  updateColorWithFramerate(fps);
+                                                 CFTimeInterval endTime = CACurrentMediaTime();
+                                                 if (endTime - startTime > kWatchdogTreshholdTimeInterval) {
+                                                     NSLog(@"Blocked for %.2f seconds", endTime - startTime);
+                                                 }
                                              });
                                          });
 }
