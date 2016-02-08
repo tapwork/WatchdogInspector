@@ -17,13 +17,23 @@ static UILabel *kTextLabel = nil;
 static int kNumberOfFrames = 0;
 static CFTimeInterval kUpdateWatchdogInterval = 2.0;
 static dispatch_source_t kWatchdogTimer;
-static dispatch_source_t kMainThreadTimer;
 
 @implementation TWFramerateInspector
 
 static void timerFramerateCallback(CFRunLoopTimerRef timer, void *info)
 {
     kNumberOfFrames++;
+}
+
+static void runloopObserverCallback(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info)
+{
+    if (activity == kCFRunLoopAfterWaiting) {
+        NSLog(@"====================");
+        NSLog(@"entry");
+    } else if (activity == kCFRunLoopBeforeWaiting) {
+        NSLog(@"exit");
+        NSLog(@"====================");
+    }
 }
 
 static void updateColorWithFramerate(double framerate)
@@ -49,8 +59,9 @@ static void updateColorWithFramerate(double framerate)
 {
     [self stop];
  
-    [self addMainThreadFramerateCounter];
     [self addWatchdogTimer];
+    [self addMainThreadFramerateCounter];
+ //   [self addRunLoopObserver];
 
     if (!kTextLabel) {
         [self setupStatusBarLabel];
@@ -73,26 +84,47 @@ static void updateColorWithFramerate(double framerate)
     CFRunLoopAddTimer(runLoop, timer, kCFRunLoopCommonModes);
 }
 
++ (void)addRunLoopObserver
+{
+    CFRunLoopObserverContext context = {0, (__bridge void *)(self),
+        NULL,
+        NULL,
+        NULL
+    };
+    
+    kObserverRef = CFRunLoopObserverCreate(kCFAllocatorDefault,
+                                           kCFRunLoopAllActivities,
+                                           YES,
+                                           0,
+                                           &runloopObserverCallback,
+                                           &context);
+    CFRunLoopAddObserver(CFRunLoopGetMain(), kObserverRef, kCFRunLoopCommonModes);
+}
+
 + (void)addWatchdogTimer
 {
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
-    kWatchdogTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+    kWatchdogTimer = createDispatchTimer(kUpdateWatchdogInterval * NSEC_PER_SEC,
+                                         (kUpdateWatchdogInterval * NSEC_PER_SEC) / 10,
+                                         dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                                             
+                                             double fps = kNumberOfFrames/kUpdateWatchdogInterval;
+                                             kNumberOfFrames = 0;
+                                             NSLog(@"fps %.2f", fps);
+                                             dispatch_async(dispatch_get_main_queue(), ^{
+                                                 updateColorWithFramerate(fps);
+                                             });
+                                         });
+}
 
-    dispatch_source_set_timer(kWatchdogTimer, dispatch_walltime(DISPATCH_TIME_NOW, NSEC_PER_SEC * kUpdateWatchdogInterval), kUpdateWatchdogInterval * NSEC_PER_SEC, 0);
-    
-    // Hey, let's actually do something when the timer fires!
-    dispatch_source_set_event_handler(kWatchdogTimer, ^{
-        double fps = kNumberOfFrames/kUpdateWatchdogInterval;
-        NSLog(@"fps %.2f", fps);
-        NSLog(@"====================");
-        
-        dispatch_sync(dispatch_get_main_queue(), ^{
-            kNumberOfFrames = 0;
-            updateColorWithFramerate(fps);
-        });
-    });
-
-    dispatch_resume(kWatchdogTimer);
+dispatch_source_t createDispatchTimer(uint64_t interval, uint64_t leeway, dispatch_queue_t queue, dispatch_block_t block)
+{
+    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+    if (timer) {
+        dispatch_source_set_timer(timer, dispatch_walltime(NULL, 0), interval, leeway);
+        dispatch_source_set_event_handler(timer, block);
+        dispatch_resume(timer);
+    }
+    return timer;
 }
 
 + (void)stop
@@ -106,12 +138,8 @@ static void updateColorWithFramerate(double framerate)
     if (kWatchdogTimer && dispatch_source_get_handle(kWatchdogTimer)) {
         dispatch_source_cancel(kWatchdogTimer);
     }
-    if (kMainThreadTimer && dispatch_source_get_handle(kMainThreadTimer)) {
-        dispatch_source_cancel(kMainThreadTimer);
-    }
 
     kWatchdogTimer = nil;
-    kMainThreadTimer = nil;
 }
 
 - (void)dealloc
