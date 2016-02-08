@@ -35,7 +35,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELL" forIndexPath:indexPath];
     cell.textLabel.text = [NSString stringWithFormat:@"Row %@", @(indexPath.row)];
-    //[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://www.google.de"]];
+    [NSThread sleepForTimeInterval:0.3f];
     return cell;
 }
 
