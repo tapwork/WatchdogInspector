@@ -1,13 +1,13 @@
 //
 //  AppDelegate.m
-//  FramerateExample
+//  WatchdogExample
 //
 //  Created by Christian Menschel on 26/01/16.
 //  Copyright © 2016 tapwork GmbH. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import <FramerateInspector/TWFramerateInspector.h>
+#import <WatchdogInspector/TWWatchdogInspector.h>
 
 @interface AppDelegate ()
 
@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [TWFramerateInspector start];
+    [TWWatchdogInspector start];
 
     return YES;
 }

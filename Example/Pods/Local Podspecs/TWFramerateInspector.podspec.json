@@ -1,5 +1,5 @@
 {
-  "name": "TWFramerateInspector",
+  "name": "TWWatchdogInspector",
   "version": "0.1.0",
   "license": {
     "type": "MIT",
@@ -7,13 +7,13 @@
   },
   "summary": "",
   "description": "",
-  "homepage": "https://github.com/tapwork/TWFramerateInspector",
+  "homepage": "https://github.com/tapwork/TWWatchdogInspector",
   "social_media_url": "https://twitter.com/cmenschel",
   "authors": {
     "Christian Menschel": "christian@tapwork.de"
   },
   "source": {
-    "git": "https://github.com/tapwork/TWFramerateInspector.git",
+    "git": "https://github.com/tapwork/TWWatchdogInspector.git",
     "tag": "0.1.0"
   },
   "platforms": {

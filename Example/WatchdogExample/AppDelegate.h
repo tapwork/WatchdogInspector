@@ -1,6 +1,6 @@
 //
 //  AppDelegate.h
-//  FramerateExample
+//  WatchdogExample
 //
 //  Created by Christian Menschel on 26/01/16.
 //  Copyright © 2016 tapwork GmbH. All rights reserved.

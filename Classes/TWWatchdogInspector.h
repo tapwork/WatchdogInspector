@@ -1,5 +1,5 @@
 //
-//  TWFramerateInspector.h
+//  TWWatchdogInspector.h
 //  Tapwork GmbH
 //
 //  Created by Christian Menschel on 25/01/16.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TWFramerateInspector : NSObject
+@interface TWWatchdogInspector : NSObject
 
 + (void)start;
 + (void)stop;

@@ -1,6 +1,6 @@
 //
-//  FramerateExampleTests.m
-//  FramerateExampleTests
+//  WatchdogExampleTests.m
+//  WatchdogExampleTests
 //
 //  Created by Christian Menschel on 26/01/16.
 //  Copyright © 2016 tapwork GmbH. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface FramerateExampleTests : XCTestCase
+@interface WatchdogExampleTests : XCTestCase
 
 @end
 
-@implementation FramerateExampleTests
+@implementation WatchdogExampleTests
 
 - (void)setUp {
     [super setUp];

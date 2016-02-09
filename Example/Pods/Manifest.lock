@@ -1,17 +1,17 @@
 PODS:
-  - FramerateInspector (0.1.0):
+  - WatchdogInspector (0.1.0):
     - YourStatusBar (~> 1.0.0)
   - YourStatusBar (1.0.1)
 
 DEPENDENCIES:
-  - FramerateInspector (from `../FramerateInspector.podspec`)
+  - WatchdogInspector (from `../WatchdogInspector.podspec`)
 
 EXTERNAL SOURCES:
-  FramerateInspector:
-    :path: ../FramerateInspector.podspec
+  WatchdogInspector:
+    :path: "../WatchdogInspector.podspec"
 
 SPEC CHECKSUMS:
-  FramerateInspector: a0e656fa68ed9694e5ccfdd479f9d393d0f04d94
+  WatchdogInspector: f49c3ca9575c7b0abbca9479df0011eb77d1292f
   YourStatusBar: 8fe2e308865c97018565e57da6dab1a17d4fdf25
 
 COCOAPODS: 0.39.0

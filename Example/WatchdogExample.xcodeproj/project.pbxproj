@@ -14,7 +14,7 @@
 		DAE81DF21C58282E000838D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE81DF01C58282E000838D3 /* Main.storyboard */; };
 		DAE81DF41C58282E000838D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE81DF31C58282E000838D3 /* Assets.xcassets */; };
 		DAE81DF71C58282E000838D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE81DF51C58282E000838D3 /* LaunchScreen.storyboard */; };
-		DAE81E021C58282F000838D3 /* FramerateExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE81E011C58282F000838D3 /* FramerateExampleTests.m */; };
+		DAE81E021C58282F000838D3 /* WatchdogExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE81E011C58282F000838D3 /* WatchdogExampleTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +23,7 @@
 			containerPortal = DAE81DDC1C58282E000838D3 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = DAE81DE31C58282E000838D3;
-			remoteInfo = FramerateExample;
+			remoteInfo = WatchdogExample;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -31,7 +31,7 @@
 		182E5C057EB3FC705FC5487B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6036E0ABB797FAFD2FDCCCB3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		90286A84DD2478AF2010B34B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		DAE81DE41C58282E000838D3 /* FramerateExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FramerateExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAE81DE41C58282E000838D3 /* WatchdogExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchdogExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE81DE81C58282E000838D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAE81DEA1C58282E000838D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DAE81DEB1C58282E000838D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -41,8 +41,8 @@
 		DAE81DF31C58282E000838D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAE81DF61C58282E000838D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAE81DF81C58282E000838D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DAE81DFD1C58282F000838D3 /* FramerateExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FramerateExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAE81E011C58282F000838D3 /* FramerateExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FramerateExampleTests.m; sourceTree = "<group>"; };
+		DAE81DFD1C58282F000838D3 /* WatchdogExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchdogExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAE81E011C58282F000838D3 /* WatchdogExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WatchdogExampleTests.m; sourceTree = "<group>"; };
 		DAE81E031C58282F000838D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,8 +85,8 @@
 		DAE81DDB1C58282E000838D3 = {
 			isa = PBXGroup;
 			children = (
-				DAE81DE61C58282E000838D3 /* FramerateExample */,
-				DAE81E001C58282F000838D3 /* FramerateExampleTests */,
+				DAE81DE61C58282E000838D3 /* WatchdogExample */,
+				DAE81E001C58282F000838D3 /* WatchdogExampleTests */,
 				DAE81DE51C58282E000838D3 /* Products */,
 				52E4D9209F8DC351F2DA29A7 /* Pods */,
 				B6486CC7145F50411CE6F90F /* Frameworks */,
@@ -96,13 +96,13 @@
 		DAE81DE51C58282E000838D3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DAE81DE41C58282E000838D3 /* FramerateExample.app */,
-				DAE81DFD1C58282F000838D3 /* FramerateExampleTests.xctest */,
+				DAE81DE41C58282E000838D3 /* WatchdogExample.app */,
+				DAE81DFD1C58282F000838D3 /* WatchdogExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DAE81DE61C58282E000838D3 /* FramerateExample */ = {
+		DAE81DE61C58282E000838D3 /* WatchdogExample */ = {
 			isa = PBXGroup;
 			children = (
 				DAE81DEA1C58282E000838D3 /* AppDelegate.h */,
@@ -115,7 +115,7 @@
 				DAE81DF81C58282E000838D3 /* Info.plist */,
 				DAE81DE71C58282E000838D3 /* Supporting Files */,
 			);
-			path = FramerateExample;
+			path = WatchdogExample;
 			sourceTree = "<group>";
 		};
 		DAE81DE71C58282E000838D3 /* Supporting Files */ = {
@@ -126,21 +126,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DAE81E001C58282F000838D3 /* FramerateExampleTests */ = {
+		DAE81E001C58282F000838D3 /* WatchdogExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				DAE81E011C58282F000838D3 /* FramerateExampleTests.m */,
+				DAE81E011C58282F000838D3 /* WatchdogExampleTests.m */,
 				DAE81E031C58282F000838D3 /* Info.plist */,
 			);
-			path = FramerateExampleTests;
+			path = WatchdogExampleTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DAE81DE31C58282E000838D3 /* FramerateExample */ = {
+		DAE81DE31C58282E000838D3 /* WatchdogExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DAE81E061C58282F000838D3 /* Build configuration list for PBXNativeTarget "FramerateExample" */;
+			buildConfigurationList = DAE81E061C58282F000838D3 /* Build configuration list for PBXNativeTarget "WatchdogExample" */;
 			buildPhases = (
 				09D65344A4212FF54DF2EB78 /* Check Pods Manifest.lock */,
 				DAE81DE01C58282E000838D3 /* Sources */,
@@ -153,14 +153,14 @@
 			);
 			dependencies = (
 			);
-			name = FramerateExample;
-			productName = FramerateExample;
-			productReference = DAE81DE41C58282E000838D3 /* FramerateExample.app */;
+			name = WatchdogExample;
+			productName = WatchdogExample;
+			productReference = DAE81DE41C58282E000838D3 /* WatchdogExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DAE81DFC1C58282F000838D3 /* FramerateExampleTests */ = {
+		DAE81DFC1C58282F000838D3 /* WatchdogExampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DAE81E091C58282F000838D3 /* Build configuration list for PBXNativeTarget "FramerateExampleTests" */;
+			buildConfigurationList = DAE81E091C58282F000838D3 /* Build configuration list for PBXNativeTarget "WatchdogExampleTests" */;
 			buildPhases = (
 				DAE81DF91C58282F000838D3 /* Sources */,
 				DAE81DFA1C58282F000838D3 /* Frameworks */,
@@ -171,9 +171,9 @@
 			dependencies = (
 				DAE81DFF1C58282F000838D3 /* PBXTargetDependency */,
 			);
-			name = FramerateExampleTests;
-			productName = FramerateExampleTests;
-			productReference = DAE81DFD1C58282F000838D3 /* FramerateExampleTests.xctest */;
+			name = WatchdogExampleTests;
+			productName = WatchdogExampleTests;
+			productReference = DAE81DFD1C58282F000838D3 /* WatchdogExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -194,7 +194,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DAE81DDF1C58282E000838D3 /* Build configuration list for PBXProject "FramerateExample" */;
+			buildConfigurationList = DAE81DDF1C58282E000838D3 /* Build configuration list for PBXProject "WatchdogExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -207,8 +207,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DAE81DE31C58282E000838D3 /* FramerateExample */,
-				DAE81DFC1C58282F000838D3 /* FramerateExampleTests */,
+				DAE81DE31C58282E000838D3 /* WatchdogExample */,
+				DAE81DFC1C58282F000838D3 /* WatchdogExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -296,7 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAE81E021C58282F000838D3 /* FramerateExampleTests.m in Sources */,
+				DAE81E021C58282F000838D3 /* WatchdogExampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +305,7 @@
 /* Begin PBXTargetDependency section */
 		DAE81DFF1C58282F000838D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DAE81DE31C58282E000838D3 /* FramerateExample */;
+			target = DAE81DE31C58282E000838D3 /* WatchdogExample */;
 			targetProxy = DAE81DFE1C58282F000838D3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -417,9 +417,9 @@
 			baseConfigurationReference = 182E5C057EB3FC705FC5487B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = FramerateExample/Info.plist;
+				INFOPLIST_FILE = WatchdogExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = TW.FramerateExample;
+				PRODUCT_BUNDLE_IDENTIFIER = TW.WatchdogExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -429,9 +429,9 @@
 			baseConfigurationReference = 90286A84DD2478AF2010B34B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = FramerateExample/Info.plist;
+				INFOPLIST_FILE = WatchdogExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = TW.FramerateExample;
+				PRODUCT_BUNDLE_IDENTIFIER = TW.WatchdogExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -440,11 +440,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = FramerateExampleTests/Info.plist;
+				INFOPLIST_FILE = WatchdogExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = TW.FramerateExampleTests;
+				PRODUCT_BUNDLE_IDENTIFIER = TW.WatchdogExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FramerateExample.app/FramerateExample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchdogExample.app/WatchdogExample";
 			};
 			name = Debug;
 		};
@@ -452,18 +452,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = FramerateExampleTests/Info.plist;
+				INFOPLIST_FILE = WatchdogExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = TW.FramerateExampleTests;
+				PRODUCT_BUNDLE_IDENTIFIER = TW.WatchdogExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FramerateExample.app/FramerateExample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchdogExample.app/WatchdogExample";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DAE81DDF1C58282E000838D3 /* Build configuration list for PBXProject "FramerateExample" */ = {
+		DAE81DDF1C58282E000838D3 /* Build configuration list for PBXProject "WatchdogExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAE81E041C58282F000838D3 /* Debug */,
@@ -472,7 +472,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DAE81E061C58282F000838D3 /* Build configuration list for PBXNativeTarget "FramerateExample" */ = {
+		DAE81E061C58282F000838D3 /* Build configuration list for PBXNativeTarget "WatchdogExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAE81E071C58282F000838D3 /* Debug */,
@@ -481,7 +481,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DAE81E091C58282F000838D3 /* Build configuration list for PBXNativeTarget "FramerateExampleTests" */ = {
+		DAE81E091C58282F000838D3 /* Build configuration list for PBXNativeTarget "WatchdogExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAE81E0A1C58282F000838D3 /* Debug */,

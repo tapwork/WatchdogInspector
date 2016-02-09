@@ -1,27 +1,27 @@
 //
-//  TWFramerateInspector.m
+//  TWWatchdogInspector.m
 //  Tapwork GmbH
 //
 //  Created by Christian Menschel on 25/01/16.
 //
 //
 
-#import "TWFramerateInspector.h"
+#import "TWWatchdogInspector.h"
 #include <mach/mach_time.h>
 #import <execinfo.h>
 #import <YourStatusBar/TWYourStatusBar.h>
 
 static CFRunLoopObserverRef kObserverRef;
-static double kBestFramerate = 60.0;
+static double kBestWatchdog = 60.0;
 static UILabel *kTextLabel = nil;
 static int kNumberOfFrames = 0;
 static CFTimeInterval kUpdateWatchdogInterval = 2.0;
 static CFTimeInterval kWatchdogTreshholdTimeInterval = 0.2;
 static dispatch_source_t kWatchdogTimer;
 
-@implementation TWFramerateInspector
+@implementation TWWatchdogInspector
 
-static void timerFramerateCallback(CFRunLoopTimerRef timer, void *info)
+static void timerWatchdogCallback(CFRunLoopTimerRef timer, void *info)
 {
     kNumberOfFrames++;
 }
@@ -37,17 +37,17 @@ static void runloopObserverCallback(CFRunLoopObserverRef observer, CFRunLoopActi
     }
 }
 
-static void updateColorWithFramerate(double framerate)
+static void updateColorWithWatchdog(double Watchdog)
 {
     //fade from green to red
-    double n = 1 - (framerate/60);
+    double n = 1 - (Watchdog/60);
     double red = (255 * n);
     double green = (255 * (1 - n)/2);
     double blue = 0;
     UIColor *color = [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:1.0];
-    if (framerate > 0.0) {
+    if (Watchdog > 0.0) {
         kTextLabel.backgroundColor = color;
-        kTextLabel.text = [NSString stringWithFormat:@"fps: %.2f", framerate];
+        kTextLabel.text = [NSString stringWithFormat:@"fps: %.2f", Watchdog];
     } else {
         kTextLabel.backgroundColor = [UIColor lightGrayColor];
         kTextLabel.text = nil;
@@ -61,7 +61,7 @@ static void updateColorWithFramerate(double framerate)
     [self stop];
  
     [self addWatchdogTimer];
-    [self addMainThreadFramerateCounter];
+    [self addMainThreadWatchdogCounter];
  //   [self addRunLoopObserver];
 
     if (!kTextLabel) {
@@ -69,17 +69,17 @@ static void updateColorWithFramerate(double framerate)
     }
 }
 
-+ (void)addMainThreadFramerateCounter
++ (void)addMainThreadWatchdogCounter
 {
     CFRunLoopRef runLoop = CFRunLoopGetMain();
     CFRunLoopTimerContext timerContext = {0, NULL, NULL, NULL, NULL};
-    CFTimeInterval updateFramerate = 1/kBestFramerate;
+    CFTimeInterval updateWatchdog = 1/kBestWatchdog;
     CFRunLoopTimerRef timer = CFRunLoopTimerCreate(kCFAllocatorDefault,
                                                    0,
-                                                   updateFramerate,
+                                                   updateWatchdog,
                                                    0,
                                                    0,
-                                                   &timerFramerateCallback,
+                                                   &timerWatchdogCallback,
                                                    &timerContext);
 
     CFRunLoopAddTimer(runLoop, timer, kCFRunLoopCommonModes);
@@ -113,10 +113,10 @@ static void updateColorWithFramerate(double framerate)
                                              NSLog(@"fps %.2f", fps);
                                              CFTimeInterval startTime = CACurrentMediaTime();
                                              dispatch_async(dispatch_get_main_queue(), ^{
-                                                 updateColorWithFramerate(fps);
+                                                 updateColorWithWatchdog(fps);
                                                  CFTimeInterval endTime = CACurrentMediaTime();
                                                  if (endTime - startTime > kWatchdogTreshholdTimeInterval) {
-                                                     NSLog(@"Blocked for %.2f seconds", endTime - startTime);
+                                                     NSLog(@"Mainthread stalled for %.2f seconds", endTime - startTime);
                                                  }
                                              });
                                          });

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C83286F2A46842FBE3F08B1F'
-               BlueprintName = 'TWFramerateInspector'
+               BlueprintIdentifier = '17C9300740BAB52AA22A6162'
+               BlueprintName = 'WatchdogInspector'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libTWFramerateInspector.a'>
+               BuildableName = 'libWatchdogInspector.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
