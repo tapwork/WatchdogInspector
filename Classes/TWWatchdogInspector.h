@@ -10,7 +10,14 @@
 
 @interface TWWatchdogInspector : NSObject
 
+/**
+ *  Starts the WatchdogInspector
+ */
 + (void)start;
+
+/**
+ *  Stops the WatchdogInspector
+ */
 + (void)stop;
 
 /**
@@ -20,5 +27,12 @@
  *  Default is 3 seconds
  */
 + (void)setStallingThreshhold:(NSTimeInterval)time;
+
+/**
+ *  Turn off or on the NSLogs for framerate in fps
+ *
+ *  Default is on;
+ */
++ (void)setUseLogs:(BOOL)useLogs;
 
 @end

@@ -17,6 +17,7 @@ static const double kBestWatchdogFramerate = 60.0;
 
 static UILabel *kTextLabel = nil;
 static int kNumberOfFrames = 0;
+static BOOL kUseLogs = YES;
 static dispatch_source_t kWatchdogTimer;
 static CFRunLoopTimerRef kMainthreadTimer;
 static NSString *const kExceptionName = @"TWWatchdogInspectorStallingTimeout";
@@ -60,6 +61,11 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
     kWatchdogMaximumStallingTimeInterval = time;
 }
 
++ (void)setUseLogs:(BOOL)useLogs
+{
+    kUseLogs = useLogs;
+}
+
 #pragma mark - Private methods
 
 + (void)addMainThreadWatchdogCounter
@@ -87,8 +93,10 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
         dispatch_source_set_event_handler(kWatchdogTimer, ^{
             double fps = kNumberOfFrames/kUpdateWatchdogInterval;
             kNumberOfFrames = 0;
-            NSLog(@"fps %.2f", fps);
-            
+            if (kUseLogs) {
+                NSLog(@"fps %.2f", fps);
+            }
+
             CFTimeInterval startTime = CACurrentMediaTime();
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self updateColorWithFPS:fps];
