@@ -35,7 +35,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELL" forIndexPath:indexPath];
     cell.textLabel.text = [NSString stringWithFormat:@"Row %@", @(indexPath.row)];
-    [NSThread sleepForTimeInterval:0.3f];
+    [NSThread sleepForTimeInterval:0.03f];
     return cell;
 }
 
