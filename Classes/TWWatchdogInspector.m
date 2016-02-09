@@ -11,13 +11,15 @@
 #import <execinfo.h>
 #import <YourStatusBar/TWYourStatusBar.h>
 
+static const CFTimeInterval kUpdateWatchdogInterval = 2.0;
+static CFTimeInterval kWatchdogMaximumStallingTimeInterval = 3.0;
 static const double kBestWatchdogFramerate = 60.0;
+
 static UILabel *kTextLabel = nil;
 static int kNumberOfFrames = 0;
-static const CFTimeInterval kUpdateWatchdogInterval = 2.0;
-static CFTimeInterval kWatchdogMaximumStallingTimeInterval = 0.5;
 static dispatch_source_t kWatchdogTimer;
 static CFRunLoopTimerRef kMainthreadTimer;
+static NSString *const kExceptionName = @"TWWatchdogInspectorStallingTimeout";
 
 @implementation TWWatchdogInspector
 
@@ -53,6 +55,11 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
     }
 }
 
++ (void)setStallingThreshhold:(NSTimeInterval)time
+{
+    kWatchdogMaximumStallingTimeInterval = time;
+}
+
 #pragma mark - Private methods
 
 + (void)addMainThreadWatchdogCounter
@@ -86,14 +93,23 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self updateColorWithFPS:fps];
                 CFTimeInterval endTime = CACurrentMediaTime();
-                if (endTime - startTime > kWatchdogMaximumStallingTimeInterval) {
-                    NSLog(@"Mainthread stalled for %.2f seconds", endTime - startTime);
-                    
+                CFTimeInterval stallingTime = endTime - startTime;
+                if (stallingTime > kWatchdogMaximumStallingTimeInterval) {
+                    [self throwExceptionForStallingTimeout:stallingTime];
                 }
             });
         });
         dispatch_resume(kWatchdogTimer);
     }
+}
+
++ (void)throwExceptionForStallingTimeout:(NSTimeInterval)stallingTime
+{
+    NSString *reason = [NSString stringWithFormat:@"Watchdog timeout: Mainthread stalled for %.2f seconds", stallingTime];
+    NSException *excetopion = [NSException exceptionWithName:kExceptionName
+                                                      reason:reason
+                                                    userInfo:nil];
+    [excetopion raise];
 }
 
 #pragma mark - UI Updates

@@ -13,4 +13,12 @@
 + (void)start;
 + (void)stop;
 
+/**
+ *  The timeout in seconds for mainthread stalling.
+ *  If the mainthread stalls longer than this given time,
+ *  an exception will be thrown.
+ *  Default is 3 seconds
+ */
++ (void)setStallingThreshhold:(NSTimeInterval)time;
+
 @end
