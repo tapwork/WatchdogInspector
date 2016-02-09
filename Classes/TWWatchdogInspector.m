@@ -18,6 +18,7 @@ static const double kBestWatchdogFramerate = 60.0;
 static UILabel *kTextLabel = nil;
 static int kNumberOfFrames = 0;
 static BOOL kUseLogs = YES;
+static CFTimeInterval lastFramePingTime = 0;
 static dispatch_source_t kWatchdogTimer;
 static CFRunLoopTimerRef kMainthreadTimer;
 static NSString *const kExceptionName = @"TWWatchdogInspectorStallingTimeout";
@@ -27,6 +28,12 @@ static NSString *const kExceptionName = @"TWWatchdogInspectorStallingTimeout";
 static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
 {
     kNumberOfFrames++;
+    updateLastPingTime();
+}
+
+static void updateLastPingTime()
+{
+    lastFramePingTime = CACurrentMediaTime();
 }
 
 #pragma mark - Start / Stop
@@ -34,7 +41,9 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
 + (void)start
 {
     [self stop];
- 
+    
+    updateLastPingTime();
+    
     [self addWatchdogTimer];
     [self addMainThreadWatchdogCounter];
 
@@ -96,15 +105,14 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
             if (kUseLogs) {
                 NSLog(@"fps %.2f", fps);
             }
+            
+            CFTimeInterval stallingTime = CACurrentMediaTime() - lastFramePingTime;
+            if (stallingTime > kWatchdogMaximumStallingTimeInterval) {
+                [self throwExceptionForStallingTimeout:stallingTime];
+            }
 
-            CFTimeInterval startTime = CACurrentMediaTime();
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self updateColorWithFPS:fps];
-                CFTimeInterval endTime = CACurrentMediaTime();
-                CFTimeInterval stallingTime = endTime - startTime;
-                if (stallingTime > kWatchdogMaximumStallingTimeInterval) {
-                    [self throwExceptionForStallingTimeout:stallingTime];
-                }
             });
         });
         dispatch_resume(kWatchdogTimer);
