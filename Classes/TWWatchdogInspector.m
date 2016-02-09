@@ -11,23 +11,23 @@
 #import <execinfo.h>
 #import <YourStatusBar/TWYourStatusBar.h>
 
+static CFTimeInterval watchdogMaximumStallingTimeInterval = 3.0;
 static const CFTimeInterval kUpdateWatchdogInterval = 2.0;
-static CFTimeInterval kWatchdogMaximumStallingTimeInterval = 3.0;
 static const double kBestWatchdogFramerate = 60.0;
 
-static UILabel *kTextLabel = nil;
-static int kNumberOfFrames = 0;
-static BOOL kUseLogs = YES;
+static UILabel *textLabel = nil;
+static int numberOfFrames = 0;
+static BOOL useLogs = YES;
 static CFTimeInterval lastFramePingTime = 0;
-static dispatch_source_t kWatchdogTimer;
-static CFRunLoopTimerRef kMainthreadTimer;
+static dispatch_source_t watchdogTimer;
+static CFRunLoopTimerRef mainthreadTimer;
 static NSString *const kExceptionName = @"TWWatchdogInspectorStallingTimeout";
 
 @implementation TWWatchdogInspector
 
 static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
 {
-    kNumberOfFrames++;
+    numberOfFrames++;
     updateLastPingTime();
 }
 
@@ -47,32 +47,32 @@ static void updateLastPingTime()
     [self addWatchdogTimer];
     [self addMainThreadWatchdogCounter];
 
-    if (!kTextLabel) {
+    if (!textLabel) {
         [self setupStatusBarLabel];
     }
 }
 
 + (void)stop
 {
-    if (kWatchdogTimer) {
-        dispatch_source_cancel(kWatchdogTimer);
-        kWatchdogTimer = nil;
+    if (watchdogTimer) {
+        dispatch_source_cancel(watchdogTimer);
+        watchdogTimer = nil;
     }
 
-    if (kMainthreadTimer) {
-        CFRunLoopTimerInvalidate(kMainthreadTimer);
-        kMainthreadTimer = nil;
+    if (mainthreadTimer) {
+        CFRunLoopTimerInvalidate(mainthreadTimer);
+        mainthreadTimer = nil;
     }
 }
 
 + (void)setStallingThreshhold:(NSTimeInterval)time
 {
-    kWatchdogMaximumStallingTimeInterval = time;
+    watchdogMaximumStallingTimeInterval = time;
 }
 
-+ (void)setUseLogs:(BOOL)useLogs
++ (void)setUseLogs:(BOOL)use
 {
-    kUseLogs = useLogs;
+    useLogs = use;
 }
 
 #pragma mark - Private methods
@@ -91,23 +91,23 @@ static void updateLastPingTime()
                                                    &timerContext);
 
     CFRunLoopAddTimer(runLoop, timer, kCFRunLoopCommonModes);
-    kMainthreadTimer = timer;
+    mainthreadTimer = timer;
 }
 
 + (void)addWatchdogTimer
 {
-    kWatchdogTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0));
-    if (kWatchdogTimer) {
-        dispatch_source_set_timer(kWatchdogTimer, dispatch_walltime(NULL, 0), kUpdateWatchdogInterval * NSEC_PER_SEC, (kUpdateWatchdogInterval * NSEC_PER_SEC) / 10);
-        dispatch_source_set_event_handler(kWatchdogTimer, ^{
-            double fps = kNumberOfFrames/kUpdateWatchdogInterval;
-            kNumberOfFrames = 0;
-            if (kUseLogs) {
+    watchdogTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0));
+    if (watchdogTimer) {
+        dispatch_source_set_timer(watchdogTimer, dispatch_walltime(NULL, 0), kUpdateWatchdogInterval * NSEC_PER_SEC, (kUpdateWatchdogInterval * NSEC_PER_SEC) / 10);
+        dispatch_source_set_event_handler(watchdogTimer, ^{
+            double fps = numberOfFrames/kUpdateWatchdogInterval;
+            numberOfFrames = 0;
+            if (useLogs) {
                 NSLog(@"fps %.2f", fps);
             }
             
             CFTimeInterval stallingTime = CACurrentMediaTime() - lastFramePingTime;
-            if (stallingTime > kWatchdogMaximumStallingTimeInterval) {
+            if (stallingTime > watchdogMaximumStallingTimeInterval) {
                 [self throwExceptionForStallingTimeout:stallingTime];
             }
 
@@ -115,7 +115,7 @@ static void updateLastPingTime()
                 [self updateColorWithFPS:fps];
             });
         });
-        dispatch_resume(kWatchdogTimer);
+        dispatch_resume(watchdogTimer);
     }
 }
 
@@ -139,11 +139,11 @@ static void updateLastPingTime()
     double blue = 0;
     UIColor *color = [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:1.0];
     if (fps > 0.0) {
-        kTextLabel.backgroundColor = color;
-        kTextLabel.text = [NSString stringWithFormat:@"fps: %.2f", fps];
+        textLabel.backgroundColor = color;
+        textLabel.text = [NSString stringWithFormat:@"fps: %.2f", fps];
     } else {
-        kTextLabel.backgroundColor = [UIColor lightGrayColor];
-        kTextLabel.text = nil;
+        textLabel.backgroundColor = [UIColor lightGrayColor];
+        textLabel.text = nil;
     }
 }
 
@@ -156,7 +156,7 @@ static void updateLastPingTime()
     CGSize size = [UIApplication sharedApplication].statusBarFrame.size;
     label.frame = CGRectMake(0, 0, size.width, size.height);
     [TWYourStatusBar setCustomView:label];
-    kTextLabel = label;
+    textLabel = label;
 }
 
 #pragma mark - Life Cycle
