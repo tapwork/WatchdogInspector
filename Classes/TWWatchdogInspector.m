@@ -10,12 +10,13 @@
 #include <mach/mach_time.h>
 #import <execinfo.h>
 #import <YourStatusBar/TWYourStatusBar.h>
+#import "TWWatchdogInspectorStatusBarView.h"
 
 static CFTimeInterval watchdogMaximumStallingTimeInterval = 3.0;
 static const CFTimeInterval kUpdateWatchdogInterval = 2.0;
 static const double kBestWatchdogFramerate = 60.0;
 
-static UILabel *textLabel = nil;
+static TWWatchdogInspectorStatusBarView *statusBarView = nil;
 static int numberOfFrames = 0;
 static BOOL useLogs = YES;
 static CFTimeInterval lastFramePingTime = 0;
@@ -47,8 +48,8 @@ static void updateLastPingTime()
     [self addWatchdogTimer];
     [self addMainThreadWatchdogCounter];
 
-    if (!textLabel) {
-        [self setupStatusBarLabel];
+    if (!statusBarView) {
+        [self setupStatusView];
     }
 }
 
@@ -112,7 +113,7 @@ static void updateLastPingTime()
             }
 
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self updateColorWithFPS:fps];
+                statusBarView.fps = fps;
             });
         });
         dispatch_resume(watchdogTimer);
@@ -130,33 +131,13 @@ static void updateLastPingTime()
 
 #pragma mark - UI Updates
 
-+ (void)updateColorWithFPS:(double)fps
++ (void)setupStatusView
 {
-    //fade from green to red
-    double n = 1 - (fps/60);
-    double red = (255 * n);
-    double green = (255 * (1 - n)/2);
-    double blue = 0;
-    UIColor *color = [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:1.0];
-    if (fps > 0.0) {
-        textLabel.backgroundColor = color;
-        textLabel.text = [NSString stringWithFormat:@"fps: %.2f", fps];
-    } else {
-        textLabel.backgroundColor = [UIColor lightGrayColor];
-        textLabel.text = nil;
-    }
-}
-
-+ (void)setupStatusBarLabel
-{
-    UILabel *label = [[UILabel alloc] init];
-    label.backgroundColor = [UIColor lightGrayColor];
-    label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    label.font = [UIFont systemFontOfSize:11];
+    TWWatchdogInspectorStatusBarView *view = [[TWWatchdogInspectorStatusBarView alloc] init];
     CGSize size = [UIApplication sharedApplication].statusBarFrame.size;
-    label.frame = CGRectMake(0, 0, size.width, size.height);
-    [TWYourStatusBar setCustomView:label];
-    textLabel = label;
+    view.frame = CGRectMake(0, 0, size.width, size.height);
+    [TWYourStatusBar setCustomView:view];
+    statusBarView = view;
 }
 
 #pragma mark - Life Cycle
