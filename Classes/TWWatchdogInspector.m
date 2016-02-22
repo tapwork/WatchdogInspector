@@ -15,36 +15,29 @@
 static CFTimeInterval watchdogMaximumStallingTimeInterval = 3.0;
 static const CFTimeInterval kUpdateWatchdogInterval = 2.0;
 static const double kBestWatchdogFramerate = 60.0;
-
+static CFRunLoopObserverRef kObserverRef;
 static TWWatchdogInspectorStatusBarView *statusBarView = nil;
 static int numberOfFrames = 0;
 static BOOL useLogs = YES;
-static CFTimeInterval lastFramePingTime = 0;
+static CFTimeInterval lastMainThreadEntryTime = 0;
 static dispatch_source_t watchdogTimer;
 static CFRunLoopTimerRef mainthreadTimer;
 static NSString *const kExceptionName = @"TWWatchdogInspectorStallingTimeout";
 
-@implementation TWWatchdogInspector
 
 static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
 {
     numberOfFrames++;
-    updateLastPingTime();
 }
 
-static void updateLastPingTime()
-{
-    lastFramePingTime = CACurrentMediaTime();
-}
+@implementation TWWatchdogInspector
 
 #pragma mark - Start / Stop
 
 + (void)start
 {
     [self stop];
-    
-    updateLastPingTime();
-    
+    [self addRunLoopObserver];
     [self addWatchdogTimer];
     [self addMainThreadWatchdogCounter];
 
@@ -63,6 +56,12 @@ static void updateLastPingTime()
     if (mainthreadTimer) {
         CFRunLoopTimerInvalidate(mainthreadTimer);
         mainthreadTimer = nil;
+    }
+    
+    if (kObserverRef) {
+        CFRunLoopRemoveObserver(CFRunLoopGetMain(), kObserverRef, kCFRunLoopCommonModes);
+        CFRelease(kObserverRef);
+        kObserverRef = nil;
     }
 }
 
@@ -106,27 +105,41 @@ static void updateLastPingTime()
             if (useLogs) {
                 NSLog(@"fps %.2f", fps);
             }
-            
-            CFTimeInterval stallingTime = CACurrentMediaTime() - lastFramePingTime;
-            if (stallingTime > watchdogMaximumStallingTimeInterval) {
-                [self throwExceptionForStallingTimeout:stallingTime];
-            }
-
+            [self throwExceptionForStallingIfNeeded];
             dispatch_async(dispatch_get_main_queue(), ^{
-                [statusBarView updateLabelWithFPS:fps stallingTime:stallingTime];
+                [statusBarView updateFPS:fps];
             });
         });
         dispatch_resume(watchdogTimer);
     }
 }
 
-+ (void)throwExceptionForStallingTimeout:(NSTimeInterval)stallingTime
++ (void)addRunLoopObserver
 {
-    NSString *reason = [NSString stringWithFormat:@"Watchdog timeout: Mainthread stalled for %.2f seconds", stallingTime];
-    NSException *excetopion = [NSException exceptionWithName:kExceptionName
-                                                      reason:reason
-                                                    userInfo:nil];
-    [excetopion raise];
+    kObserverRef = CFRunLoopObserverCreateWithHandler(NULL, kCFRunLoopAllActivities,
+                                                      YES,
+                                                      0,
+                                                      ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity)
+                                                      {
+                                                          if (activity == kCFRunLoopAfterWaiting) {
+                                                              lastMainThreadEntryTime = CACurrentMediaTime();
+                                                          } else if (activity == kCFRunLoopBeforeTimers) {
+                                                              [self throwExceptionForStallingIfNeeded];
+                                                          }
+                                                      });
+    CFRunLoopAddObserver(CFRunLoopGetMain(), kObserverRef, kCFRunLoopCommonModes);
+}
+
++ (void)throwExceptionForStallingIfNeeded
+{
+    CFTimeInterval time = CACurrentMediaTime() - lastMainThreadEntryTime;
+    if (time > watchdogMaximumStallingTimeInterval && lastMainThreadEntryTime > 0) {
+        NSString *reason = [NSString stringWithFormat:@"Watchdog timeout: Mainthread stalled for %.2f seconds", time];
+        NSException *excetopion = [NSException exceptionWithName:kExceptionName
+                                                          reason:reason
+                                                        userInfo:nil];
+        [excetopion raise];
+    }
 }
 
 #pragma mark - UI Updates
