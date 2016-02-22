@@ -12,9 +12,11 @@ static const double kBestFrameRate = 60.0;
 static const CGFloat kBarViewWidth = 10.0;
 static const CGFloat kBarViewPaddingX = 8.0;
 static const CGFloat kBarViewAnimationDuration = 2.0;
+static const CGFloat kLabelWidth = 150.0;
 
 @interface TWWatchdogInspectorStatusBarView ()
-@property (nonatomic, nonnull) UILabel *label;
+@property (nonatomic, nonnull) UILabel *fpsLabel;
+@property (nonatomic, nonnull) UILabel *timeLabel;
 @property (nonatomic, nonnull) NSHashTable *barViews;
 @end
 
@@ -26,11 +28,17 @@ static const CGFloat kBarViewAnimationDuration = 2.0;
     if (self) {
         self.backgroundColor = [UIColor lightGrayColor];
 
-        UILabel *label = [[UILabel alloc] init];
-        label.backgroundColor = [UIColor clearColor];
-        label.font = [UIFont boldSystemFontOfSize:14];
-        [self addSubview:label];
-        _label = label;
+        UILabel *fpsLabel = [[UILabel alloc] init];
+        fpsLabel.backgroundColor = [UIColor clearColor];
+        fpsLabel.font = [UIFont boldSystemFontOfSize:14];
+        [self addSubview:fpsLabel];
+        _fpsLabel = fpsLabel;
+        
+        UILabel *timeLabel = [[UILabel alloc] init];
+        timeLabel.backgroundColor = [UIColor clearColor];
+        timeLabel.font = [UIFont boldSystemFontOfSize:14];
+        [self addSubview:timeLabel];
+        _timeLabel = timeLabel;
         
         _barViews = [NSHashTable weakObjectsHashTable];
     }
@@ -43,21 +51,31 @@ static const CGFloat kBarViewAnimationDuration = 2.0;
 {
     [super layoutSubviews];
     
-    _label.frame = CGRectInset(self.bounds, 4, 0);
+    self.fpsLabel.frame = CGRectMake(4, 0, kLabelWidth, self.bounds.size.height);
+    self.timeLabel.frame = CGRectMake(CGRectGetMaxX(_fpsLabel.frame), 0, kLabelWidth, self.bounds.size.height);
 }
 
 #pragma mark - Public methods
 
-- (void)updateLabelWithFPS:(double)fps stallingTime:(NSTimeInterval)stallingTime
+- (void)updateFPS:(double)fps
 {
-    if (fps > 0.0) {
-        self.label.text = [NSString stringWithFormat:@"fps: %.2f    Stalling: %.2f Sec", fps, stallingTime];
+    if (fps > 0) {
+        self.fpsLabel.text = [NSString stringWithFormat:@"fps: %.2f", fps];
     } else {
-        self.label.text = nil;
+        self.fpsLabel.text = nil;
     }
 
     [self updateColorWithFPS:fps];
     [self addBarWithFPS:fps];
+}
+
+- (void)updateStallingTime:(NSTimeInterval)stallingTime
+{
+    if (stallingTime > 0) {
+        self.timeLabel.text = [NSString stringWithFormat:@"Stalling: %.2f Sec", stallingTime];
+    } else {
+        self.timeLabel.text = nil;
+    }
 }
 
 #pragma mark - Private methods
@@ -92,7 +110,8 @@ static const CGFloat kBarViewAnimationDuration = 2.0;
 }
 
 - (void)animateBarViews {
-    [self bringSubviewToFront:self.label];
+    [self bringSubviewToFront:self.fpsLabel];
+    [self bringSubviewToFront:self.timeLabel];
     for (UIView *barView in self.barViews) {
         CGRect rect = barView.frame;
         rect.origin.x = rect.origin.x - rect.size.width - kBarViewPaddingX;
