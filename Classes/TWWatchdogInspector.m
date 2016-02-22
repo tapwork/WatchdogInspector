@@ -113,7 +113,7 @@ static void updateLastPingTime()
             }
 
             dispatch_async(dispatch_get_main_queue(), ^{
-                statusBarView.fps = fps;
+                [statusBarView updateLabelWithFPS:fps stallingTime:stallingTime];
             });
         });
         dispatch_resume(watchdogTimer);

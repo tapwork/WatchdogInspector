@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TWWatchdogInspectorStatusBarView : UIView
 
-@property (nonatomic) double fps;
+- (void)updateLabelWithFPS:(double)fps stallingTime:(NSTimeInterval)stallingTime;
 
 @end
 

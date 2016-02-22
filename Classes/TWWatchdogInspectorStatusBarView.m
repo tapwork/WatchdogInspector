@@ -28,7 +28,8 @@ static const CGFloat kBarViewAnimationDuration = 2.0;
 
         UILabel *label = [[UILabel alloc] init];
         label.backgroundColor = [UIColor clearColor];
-        label.font = [UIFont systemFontOfSize:14];
+        label.font = [UIFont boldSystemFontOfSize:14];
+        label.numberOfLines = 2;
         [self addSubview:label];
         _label = label;
         
@@ -46,11 +47,16 @@ static const CGFloat kBarViewAnimationDuration = 2.0;
     _label.frame = CGRectInset(self.bounds, 4, 0);
 }
 
-#pragma mark - Setter
+#pragma mark - Public methods
 
-- (void)setFps:(double)fps
+- (void)updateLabelWithFPS:(double)fps stallingTime:(NSTimeInterval)stallingTime
 {
-    _fps = fps;
+    if (fps > 0.0) {
+        self.label.text = [NSString stringWithFormat:@"fps: %.2f\nStalling: %.2f Sec", fps, stallingTime];
+    } else {
+        self.label.text = nil;
+    }
+
     [self updateColorWithFPS:fps];
     [self addBarWithFPS:fps];
 }
@@ -65,13 +71,10 @@ static const CGFloat kBarViewAnimationDuration = 2.0;
     double green = (255 * (1 - n)/2);
     double blue = 0;
     UIColor *color = [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:1.0];
-    if (fps > 0.0) {
-        self.label.text = [NSString stringWithFormat:@"fps: %.2f", fps];
-    } else {
+    if (fps == 0.0) {
         color = [UIColor lightGrayColor];
-        self.label.text = nil;
     }
-    
+
     [UIView animateWithDuration:0.2 animations:^{
         self.layer.backgroundColor = color.CGColor;
     }];
@@ -106,7 +109,7 @@ static const CGFloat kBarViewAnimationDuration = 2.0;
 
 - (void)removeBarViewIfNeeded:(UIView *)barView
 {
-    if (CGRectGetMaxX(barView.frame) <= 0) {
+    if (CGRectGetMaxX(barView.frame) <= -kBarViewPaddingX) {
         [barView removeFromSuperview];
     }
 }
