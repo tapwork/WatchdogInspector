@@ -29,7 +29,6 @@ static const CGFloat kBarViewAnimationDuration = 2.0;
         UILabel *label = [[UILabel alloc] init];
         label.backgroundColor = [UIColor clearColor];
         label.font = [UIFont boldSystemFontOfSize:14];
-        label.numberOfLines = 2;
         [self addSubview:label];
         _label = label;
         
@@ -52,7 +51,7 @@ static const CGFloat kBarViewAnimationDuration = 2.0;
 - (void)updateLabelWithFPS:(double)fps stallingTime:(NSTimeInterval)stallingTime
 {
     if (fps > 0.0) {
-        self.label.text = [NSString stringWithFormat:@"fps: %.2f\nStalling: %.2f Sec", fps, stallingTime];
+        self.label.text = [NSString stringWithFormat:@"fps: %.2f    Stalling: %.2f Sec", fps, stallingTime];
     } else {
         self.label.text = nil;
     }
@@ -86,7 +85,7 @@ static const CGFloat kBarViewAnimationDuration = 2.0;
     CGFloat xPos = self.bounds.size.width;
     CGFloat yPos = self.bounds.size.height - height;
     UIView *barView = [[UIView alloc] initWithFrame:CGRectMake(xPos, yPos, kBarViewWidth, height)];
-    barView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.6];
+    barView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.2];
     [self addSubview:barView];
     [self.barViews addObject:barView];
     [self animateBarViews];
