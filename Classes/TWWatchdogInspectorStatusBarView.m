@@ -28,7 +28,7 @@ static const CGFloat kBarViewAnimationDuration = 2.0;
 
         UILabel *label = [[UILabel alloc] init];
         label.backgroundColor = [UIColor clearColor];
-        label.font = [UIFont systemFontOfSize:11];
+        label.font = [UIFont systemFontOfSize:14];
         [self addSubview:label];
         _label = label;
         
@@ -42,8 +42,8 @@ static const CGFloat kBarViewAnimationDuration = 2.0;
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-
-    _label.frame = self.bounds;
+    
+    _label.frame = CGRectInset(self.bounds, 4, 0);
 }
 
 #pragma mark - Setter
