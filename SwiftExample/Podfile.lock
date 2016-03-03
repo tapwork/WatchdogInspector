@@ -1,0 +1,17 @@
+PODS:
+  - WatchdogInspector (0.1.0):
+    - YourStatusBar (~> 1.0.0)
+  - YourStatusBar (1.0.1)
+
+DEPENDENCIES:
+  - WatchdogInspector (from `../WatchdogInspector.podspec`)
+
+EXTERNAL SOURCES:
+  WatchdogInspector:
+    :path: "../WatchdogInspector.podspec"
+
+SPEC CHECKSUMS:
+  WatchdogInspector: f49c3ca9575c7b0abbca9479df0011eb77d1292f
+  YourStatusBar: 8fe2e308865c97018565e57da6dab1a17d4fdf25
+
+COCOAPODS: 0.39.0

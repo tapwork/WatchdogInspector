@@ -1,0 +1,708 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		255BEA2ED0006D7C8E3094522EB33834 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF402C14E71EEA17DEB706502B591BA /* Foundation.framework */; };
+		2F763815DEE357C66941BE619961ED59 /* WatchdogInspector-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E61BE2106C5AE2C40AB340858467F53 /* WatchdogInspector-dummy.m */; };
+		4B43D6CFF099F4C44CFDFE534152FEA8 /* TWYourStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 73735FE7AA853349ED2D89082A6A138E /* TWYourStatusBar.m */; };
+		81A2480495A0A91F65085EF6A32D5D6F /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */; };
+		82C67EAC5FCE5265C2AD710009F4E972 /* YourStatusBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BFCAD833DFC5836804CE556AFA5E1F /* YourStatusBar.framework */; };
+		89A8B473F7C0D9A005CB5DCF2CB3601F /* WatchdogInspector-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DEE74068FA80780AC807F6E0E4D38BA1 /* WatchdogInspector-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91E2D48CF1A0716920B8419155AEF296 /* TWWatchdogInspectorStatusBarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 311313429A14D9077EB0434577EFFE0C /* TWWatchdogInspectorStatusBarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E7AB468CE588D237950F346BE7FCD0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF402C14E71EEA17DEB706502B591BA /* Foundation.framework */; };
+		9EACF3D5ED0CCBE1DD4C080E786394D5 /* TWWatchdogInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = C15DEB92C78FB2B2047BA35836819CCE /* TWWatchdogInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD0282FEB44A9F975A5A730891D7259A /* TWWatchdogInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A09978130871A8B76128BD10FAADA1 /* TWWatchdogInspector.m */; };
+		D0C72D9024F748666F5D80D83672A315 /* TWYourStatusBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CDE5EFDEBA68AD58059EC634CB13A89 /* TWYourStatusBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D597B8697D2EA7D3A80A86B2FC7E8C3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF402C14E71EEA17DEB706502B591BA /* Foundation.framework */; };
+		D7FA25C4F0B2569BC0A330B526BAEE14 /* TWWatchdogInspectorStatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF31F7C1C3DCAE4FCC0B48C982D95B10 /* TWWatchdogInspectorStatusBarView.m */; };
+		E0200144D45B2863EE239F131A4F951A /* YourStatusBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAAF71250F73AC475272CD66F6ABBAB /* YourStatusBar-dummy.m */; };
+		E722F80DD72520179A003E560CA68C69 /* YourStatusBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A811CFB6049A33265B3C0BED4A6F9B4 /* YourStatusBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E797F15C5EA4C381D26519ED545EE618 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		647E1E9F3903BFB851F58244A0CF1797 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AB25ADD76E172C210A0092FE9AC8E52;
+			remoteInfo = YourStatusBar;
+		};
+		B48D827C06DC301CEB42D2C9178FE88C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B108C7949F3B44738CFF44D57049FEF;
+			remoteInfo = WatchdogInspector;
+		};
+		F9C71EE6EE557532B74854D27D579DED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AB25ADD76E172C210A0092FE9AC8E52;
+			remoteInfo = YourStatusBar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04D99E25BC0D5D42F5F2DCE9BD65BB14 /* YourStatusBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YourStatusBar-prefix.pch"; sourceTree = "<group>"; };
+		0ADC4B1DF2AF3FC6D6B1CD0033D1D015 /* YourStatusBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YourStatusBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EAAF71250F73AC475272CD66F6ABBAB /* YourStatusBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YourStatusBar-dummy.m"; sourceTree = "<group>"; };
+		2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
+		311313429A14D9077EB0434577EFFE0C /* TWWatchdogInspectorStatusBarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TWWatchdogInspectorStatusBarView.h; sourceTree = "<group>"; };
+		3E61BE2106C5AE2C40AB340858467F53 /* WatchdogInspector-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WatchdogInspector-dummy.m"; sourceTree = "<group>"; };
+		5355492D457D0FB8CC502ECF3A2ECAA6 /* WatchdogInspector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WatchdogInspector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C1D4F4C01883D4DA604C38B85576AA9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		706923841EDE687D81B5A80EEEA6F9E6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71343A44545AA86F6093AC99541B400C /* WatchdogInspector.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WatchdogInspector.xcconfig; sourceTree = "<group>"; };
+		73735FE7AA853349ED2D89082A6A138E /* TWYourStatusBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TWYourStatusBar.m; path = Classes/TWYourStatusBar.m; sourceTree = "<group>"; };
+		79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
+		7A811CFB6049A33265B3C0BED4A6F9B4 /* YourStatusBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YourStatusBar-umbrella.h"; sourceTree = "<group>"; };
+		87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		95BFCAD833DFC5836804CE556AFA5E1F /* YourStatusBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YourStatusBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		980BB74CA64255553F1A3D61F7B762FD /* YourStatusBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = YourStatusBar.modulemap; sourceTree = "<group>"; };
+		9CDE5EFDEBA68AD58059EC634CB13A89 /* TWYourStatusBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TWYourStatusBar.h; path = Classes/TWYourStatusBar.h; sourceTree = "<group>"; };
+		AA1436CB83F4E7E1BD107AD211E1CAEB /* WatchdogInspector.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = WatchdogInspector.modulemap; sourceTree = "<group>"; };
+		B5A09978130871A8B76128BD10FAADA1 /* TWWatchdogInspector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TWWatchdogInspector.m; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C15DEB92C78FB2B2047BA35836819CCE /* TWWatchdogInspector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TWWatchdogInspector.h; sourceTree = "<group>"; };
+		CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		CEF402C14E71EEA17DEB706502B591BA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CF31F7C1C3DCAE4FCC0B48C982D95B10 /* TWWatchdogInspectorStatusBarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TWWatchdogInspectorStatusBarView.m; sourceTree = "<group>"; };
+		D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D0D3F35D9C0778120AB6A89E40F75390 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D471F2964056396AE66DF01D729E77EF /* WatchdogInspector-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WatchdogInspector-prefix.pch"; sourceTree = "<group>"; };
+		DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		DEE74068FA80780AC807F6E0E4D38BA1 /* WatchdogInspector-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WatchdogInspector-umbrella.h"; sourceTree = "<group>"; };
+		E78BBD109FB9823CBB66C4C75CCAE808 /* YourStatusBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YourStatusBar.xcconfig; sourceTree = "<group>"; };
+		E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		41190D9F7D229B59EE8583DC9E3720D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E7AB468CE588D237950F346BE7FCD0B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D02CF31CDC1EDD478CDE54CD1BFB8EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D597B8697D2EA7D3A80A86B2FC7E8C3B /* Foundation.framework in Frameworks */,
+				82C67EAC5FCE5265C2AD710009F4E972 /* YourStatusBar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1AC7E53A53EB1A7A8C09B59FAEE4474 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				255BEA2ED0006D7C8E3094522EB33834 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13107433766A6F9F88C92889CEDDEFA5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				706923841EDE687D81B5A80EEEA6F9E6 /* Info.plist */,
+				AA1436CB83F4E7E1BD107AD211E1CAEB /* WatchdogInspector.modulemap */,
+				71343A44545AA86F6093AC99541B400C /* WatchdogInspector.xcconfig */,
+				3E61BE2106C5AE2C40AB340858467F53 /* WatchdogInspector-dummy.m */,
+				D471F2964056396AE66DF01D729E77EF /* WatchdogInspector-prefix.pch */,
+				DEE74068FA80780AC807F6E0E4D38BA1 /* WatchdogInspector-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "SwiftExample/Pods/Target Support Files/WatchdogInspector";
+			sourceTree = "<group>";
+		};
+		2CA22C90DD4A3D9983E41D7E7447DBEB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2DDAB2DF1B95808A63CAD699C585629 /* YourStatusBar */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3A3DC228162E01D8E027B171D14E71EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95BFCAD833DFC5836804CE556AFA5E1F /* YourStatusBar.framework */,
+				75441B64989F17C9CDFD46A8D9DDDA7E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		545F33E42B96DF094EBB93AD8367E0C4 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B729CD0D2EF3D391ECDCC51BB36493F1 /* WatchdogInspector */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		75441B64989F17C9CDFD46A8D9DDDA7E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEF402C14E71EEA17DEB706502B591BA /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		75D98FF52E597A11900E131B6C4E1ADA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */,
+				79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */,
+				D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */,
+				87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */,
+				894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */,
+				E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */,
+				CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */,
+				2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */,
+				977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */,
+				DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				545F33E42B96DF094EBB93AD8367E0C4 /* Development Pods */,
+				3A3DC228162E01D8E027B171D14E71EB /* Frameworks */,
+				2CA22C90DD4A3D9983E41D7E7447DBEB /* Pods */,
+				E6AD1DB2EC294000C37D8B173A231052 /* Products */,
+				B7B80995527643776607AFFA75B91E24 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8D5345F4D782329F3F4FEB257381454F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0D3F35D9C0778120AB6A89E40F75390 /* Info.plist */,
+				980BB74CA64255553F1A3D61F7B762FD /* YourStatusBar.modulemap */,
+				E78BBD109FB9823CBB66C4C75CCAE808 /* YourStatusBar.xcconfig */,
+				0EAAF71250F73AC475272CD66F6ABBAB /* YourStatusBar-dummy.m */,
+				04D99E25BC0D5D42F5F2DCE9BD65BB14 /* YourStatusBar-prefix.pch */,
+				7A811CFB6049A33265B3C0BED4A6F9B4 /* YourStatusBar-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/YourStatusBar";
+			sourceTree = "<group>";
+		};
+		B729CD0D2EF3D391ECDCC51BB36493F1 /* WatchdogInspector */ = {
+			isa = PBXGroup;
+			children = (
+				EFB275F06BFE8CACF617F9C9F872A976 /* Classes */,
+				13107433766A6F9F88C92889CEDDEFA5 /* Support Files */,
+			);
+			name = WatchdogInspector;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		B7B80995527643776607AFFA75B91E24 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				75D98FF52E597A11900E131B6C4E1ADA /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E6AD1DB2EC294000C37D8B173A231052 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C1D4F4C01883D4DA604C38B85576AA9 /* Pods.framework */,
+				5355492D457D0FB8CC502ECF3A2ECAA6 /* WatchdogInspector.framework */,
+				0ADC4B1DF2AF3FC6D6B1CD0033D1D015 /* YourStatusBar.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFB275F06BFE8CACF617F9C9F872A976 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C15DEB92C78FB2B2047BA35836819CCE /* TWWatchdogInspector.h */,
+				B5A09978130871A8B76128BD10FAADA1 /* TWWatchdogInspector.m */,
+				311313429A14D9077EB0434577EFFE0C /* TWWatchdogInspectorStatusBarView.h */,
+				CF31F7C1C3DCAE4FCC0B48C982D95B10 /* TWWatchdogInspectorStatusBarView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F2DDAB2DF1B95808A63CAD699C585629 /* YourStatusBar */ = {
+			isa = PBXGroup;
+			children = (
+				9CDE5EFDEBA68AD58059EC634CB13A89 /* TWYourStatusBar.h */,
+				73735FE7AA853349ED2D89082A6A138E /* TWYourStatusBar.m */,
+				8D5345F4D782329F3F4FEB257381454F /* Support Files */,
+			);
+			path = YourStatusBar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		09E36F8558EB3FA0CBF22F8A8E261D73 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E797F15C5EA4C381D26519ED545EE618 /* Pods-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9D6066184F13448BFE15909FC5E22A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C72D9024F748666F5D80D83672A315 /* TWYourStatusBar.h in Headers */,
+				E722F80DD72520179A003E560CA68C69 /* YourStatusBar-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5465A3B66CB632B0BD21050ABE805FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EACF3D5ED0CCBE1DD4C080E786394D5 /* TWWatchdogInspector.h in Headers */,
+				91E2D48CF1A0716920B8419155AEF296 /* TWWatchdogInspectorStatusBarView.h in Headers */,
+				89A8B473F7C0D9A005CB5DCF2CB3601F /* WatchdogInspector-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1AB25ADD76E172C210A0092FE9AC8E52 /* YourStatusBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00DD074FAEFBA3C260E105E0E9780C69 /* Build configuration list for PBXNativeTarget "YourStatusBar" */;
+			buildPhases = (
+				13821F2623F0AC5B1EC67F8CA4038FFF /* Sources */,
+				B1AC7E53A53EB1A7A8C09B59FAEE4474 /* Frameworks */,
+				DE9D6066184F13448BFE15909FC5E22A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YourStatusBar;
+			productName = YourStatusBar;
+			productReference = 0ADC4B1DF2AF3FC6D6B1CD0033D1D015 /* YourStatusBar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		43CA440B8343ECE15F69FBFC34DF8D26 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40E5B10943A11551D889EFE6F76E03E5 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				89BB66B293BA4BD95E4F0ED63EEC00A8 /* Sources */,
+				41190D9F7D229B59EE8583DC9E3720D0 /* Frameworks */,
+				09E36F8558EB3FA0CBF22F8A8E261D73 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD70238362DB9F66B01E739A5F6896A1 /* PBXTargetDependency */,
+				35A3E651B193453AA2D2BDEAD7D8A9EF /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 5C1D4F4C01883D4DA604C38B85576AA9 /* Pods.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8B108C7949F3B44738CFF44D57049FEF /* WatchdogInspector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDF2C2B562F54065C1AFE81B3EA12EA4 /* Build configuration list for PBXNativeTarget "WatchdogInspector" */;
+			buildPhases = (
+				DD4223B7C65D7AD09CBC4A8793E8B1FD /* Sources */,
+				5D02CF31CDC1EDD478CDE54CD1BFB8EF /* Frameworks */,
+				F5465A3B66CB632B0BD21050ABE805FA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				561AD43A7AAAA67236510458EDA8A9BB /* PBXTargetDependency */,
+			);
+			name = WatchdogInspector;
+			productName = WatchdogInspector;
+			productReference = 5355492D457D0FB8CC502ECF3A2ECAA6 /* WatchdogInspector.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = E6AD1DB2EC294000C37D8B173A231052 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43CA440B8343ECE15F69FBFC34DF8D26 /* Pods */,
+				8B108C7949F3B44738CFF44D57049FEF /* WatchdogInspector */,
+				1AB25ADD76E172C210A0092FE9AC8E52 /* YourStatusBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13821F2623F0AC5B1EC67F8CA4038FFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B43D6CFF099F4C44CFDFE534152FEA8 /* TWYourStatusBar.m in Sources */,
+				E0200144D45B2863EE239F131A4F951A /* YourStatusBar-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89BB66B293BA4BD95E4F0ED63EEC00A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81A2480495A0A91F65085EF6A32D5D6F /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD4223B7C65D7AD09CBC4A8793E8B1FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD0282FEB44A9F975A5A730891D7259A /* TWWatchdogInspector.m in Sources */,
+				D7FA25C4F0B2569BC0A330B526BAEE14 /* TWWatchdogInspectorStatusBarView.m in Sources */,
+				2F763815DEE357C66941BE619961ED59 /* WatchdogInspector-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		35A3E651B193453AA2D2BDEAD7D8A9EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YourStatusBar;
+			target = 1AB25ADD76E172C210A0092FE9AC8E52 /* YourStatusBar */;
+			targetProxy = F9C71EE6EE557532B74854D27D579DED /* PBXContainerItemProxy */;
+		};
+		561AD43A7AAAA67236510458EDA8A9BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YourStatusBar;
+			target = 1AB25ADD76E172C210A0092FE9AC8E52 /* YourStatusBar */;
+			targetProxy = 647E1E9F3903BFB851F58244A0CF1797 /* PBXContainerItemProxy */;
+		};
+		DD70238362DB9F66B01E739A5F6896A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WatchdogInspector;
+			target = 8B108C7949F3B44738CFF44D57049FEF /* WatchdogInspector */;
+			targetProxy = B48D827C06DC301CEB42D2C9178FE88C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		035B4F64ED831313686085558B5F56CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0DF6410291F7CE32C24F50C8973BEFBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E78BBD109FB9823CBB66C4C75CCAE808 /* YourStatusBar.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/YourStatusBar/YourStatusBar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YourStatusBar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YourStatusBar/YourStatusBar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = YourStatusBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2E5966D284271E146A1CADA004D6E3F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71343A44545AA86F6093AC99541B400C /* WatchdogInspector.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/WatchdogInspector/WatchdogInspector-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WatchdogInspector/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WatchdogInspector/WatchdogInspector.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = WatchdogInspector;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		BF55683C0262DCDFB0758EC37024C7E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F39641F1FF3ED1EB4157FD744E82BFCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71343A44545AA86F6093AC99541B400C /* WatchdogInspector.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/WatchdogInspector/WatchdogInspector-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WatchdogInspector/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WatchdogInspector/WatchdogInspector.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = WatchdogInspector;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F3D50A93D4CBBEF81F0FB3D412286B5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E78BBD109FB9823CBB66C4C75CCAE808 /* YourStatusBar.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/YourStatusBar/YourStatusBar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YourStatusBar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YourStatusBar/YourStatusBar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = YourStatusBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00DD074FAEFBA3C260E105E0E9780C69 /* Build configuration list for PBXNativeTarget "YourStatusBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DF6410291F7CE32C24F50C8973BEFBF /* Debug */,
+				F3D50A93D4CBBEF81F0FB3D412286B5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40E5B10943A11551D889EFE6F76E03E5 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				035B4F64ED831313686085558B5F56CB /* Debug */,
+				BF55683C0262DCDFB0758EC37024C7E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDF2C2B562F54065C1AFE81B3EA12EA4 /* Build configuration list for PBXNativeTarget "WatchdogInspector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E5966D284271E146A1CADA004D6E3F5 /* Debug */,
+				F39641F1FF3ED1EB4157FD744E82BFCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
