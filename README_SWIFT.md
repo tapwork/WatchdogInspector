@@ -1,4 +1,6 @@
 # WatchdogInspector
+#### Shows the current framerate (fps) in the status bar of your iOS app
+##### Be a good citizen! Don't block your main thread!
 [![Build Status](https://api.travis-ci.org/tapwork/WatchdogInspector.svg?style=flat)](https://travis-ci.org/tapwork/WatchdogInspector)
 [![Cocoapods Version](http://img.shields.io/cocoapods/v/WatchdogInspector.svg?style=flat)](https://github.com/tapwork/WatchdogInspector/blob/master/WatchdogInspector.podspec)
 [![](http://img.shields.io/cocoapods/l/WatchdogInspector.svg?style=flat)](https://github.com/tapwork/WatchdogInspector/blob/master/LICENSE)
@@ -12,6 +14,8 @@ To detect unwanted main thread stalls you can set a custom watchdog timeout.
 * Status Bar displays the current framerate in fps (measured every 2 seconds)
 * Colored status bar from green (good fps) to red (bad fps)
 * Custom watchdog timeout: Exception when main thread stalls for a defined time
+
+![screencast](screencast.gif)
 
 ## Usage
 Install via CocoaPods
@@ -52,6 +56,9 @@ The background timer resets the frames counter every event and sends the measure
 
 There is also a run loop observer running to detect main thread stalls for a defined timeout. If the timeout has been reached an exception will be thrown.
 
+## Related projects
+* [HeapInspector](https://github.com/tapwork/HeapInspector-for-iOS)
+Find memory issues & leaks in your iOS app
 
 ## Author
 * [Christian Menschel](http://github.com/tapwork) ([@cmenschel](https://twitter.com/cmenschel))
