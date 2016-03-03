@@ -6,5 +6,5 @@ end
 
 desc "Runs the specs"
 task :spec do
-  sh 'xcodebuild -workspace Example/WatchdogExample.xcworkspace -scheme \'WatchdogExample\' -sdk iphonesimulator | xcpretty -tc; exit ${PIPESTATUS[0]}'
+  sh 'xcodebuild test -workspace Example/WatchdogExample.xcworkspace -scheme \'WatchdogExample\' -sdk iphonesimulator -configuration \'Debug\' -destination \'platform=iOS Simulator,name=iPhone 5s\' | xcpretty -tc; exit ${PIPESTATUS[0]}'
 end
