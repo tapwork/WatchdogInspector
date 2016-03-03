@@ -8,10 +8,10 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   WatchdogInspector:
-    :path: "../WatchdogInspector.podspec"
+    :path: ../WatchdogInspector.podspec
 
 SPEC CHECKSUMS:
-  WatchdogInspector: f49c3ca9575c7b0abbca9479df0011eb77d1292f
+  WatchdogInspector: 165a595625cec274c204aabe4030560dc0cdd314
   YourStatusBar: 8fe2e308865c97018565e57da6dab1a17d4fdf25
 
 COCOAPODS: 0.39.0
