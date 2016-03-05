@@ -63,6 +63,7 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
         CFRelease(kObserverRef);
         kObserverRef = nil;
     }
+    [self resetCountValues];
 }
 
 + (void)setStallingThreshhold:(NSTimeInterval)time
@@ -140,6 +141,11 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
                                                         userInfo:nil];
         [excetopion raise];
     }
+}
+
++ (void)resetCountValues {
+    lastMainThreadEntryTime = 0;
+    numberOfFrames = 0;
 }
 
 #pragma mark - UI Updates
