@@ -51,9 +51,10 @@ To log all measured framerates you can log them in the console by calling (Defau
 
 ## How it works
 There are basically two timers running to measure the framerate.
-1. A background timer that fires every 2 seconds to count the frames set by the main thread.
-The background timer resets the frames counter every event and sends the measured fps to the status bar on the main thread.
-2. A main thread timer that fires every 1/60 second (60 fps is optimum for a smooth animation) The main thread timer increments the frames counter every timer event.
+
+1. The background timer fires every 2 seconds to count how many frames were set by the main thread. Ideally the result would be 120 frames in 2 seconds to get 60 fps. The background timer resets the frames counter every event. He also sends the measured fps to the status bar on the main thread.
+
+2. The main thread timer should fire every 1/60 second (60 fps is optimum for a smooth animation) to increment the frames counter. If the main thread is blocked and can't run every 1/60 second the framerate will drop the 60 fps.
 
 There is also a run loop observer running to detect main thread stalls for a defined timeout. If the timeout has been reached an exception will be thrown.
 
