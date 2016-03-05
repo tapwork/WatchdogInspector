@@ -12,18 +12,19 @@
 #import <YourStatusBar/TWYourStatusBar.h>
 #import "TWWatchdogInspectorStatusBarView.h"
 
-static CFTimeInterval watchdogMaximumStallingTimeInterval = 3.0;
 static const CFTimeInterval kUpdateWatchdogInterval = 2.0;
 static const double kBestWatchdogFramerate = 60.0;
-static CFRunLoopObserverRef kObserverRef;
+static NSString *const kExceptionName = @"TWWatchdogInspectorStallingTimeout";
+
 static TWWatchdogInspectorStatusBarView *statusBarView = nil;
+
+static CFTimeInterval watchdogMaximumStallingTimeInterval = 3.0;
 static int numberOfFrames = 0;
 static BOOL useLogs = YES;
 static CFTimeInterval lastMainThreadEntryTime = 0;
 static dispatch_source_t watchdogTimer = NULL;
 static CFRunLoopTimerRef mainthreadTimer = NULL;
-static NSString *const kExceptionName = @"TWWatchdogInspectorStallingTimeout";
-
+static CFRunLoopObserverRef kObserverRef = NULL;
 
 static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
 {
@@ -32,11 +33,11 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
 
 @implementation TWWatchdogInspector
 
-#pragma mark - Start / Stop
+#pragma mark - Public methods
 
 + (void)start
 {
-    [self stop];
+    NSLog(@"Start WatchdogInspector");
     [self addRunLoopObserver];
     [self addWatchdogTimer];
     [self addMainThreadWatchdogCounter];
@@ -47,6 +48,7 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
 
 + (void)stop
 {
+    NSLog(@"Stop WatchdogInspector");
     if (watchdogTimer) {
         dispatch_source_cancel(watchdogTimer);
         watchdogTimer = NULL;
@@ -63,6 +65,14 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
         kObserverRef = NULL;
     }
     [self resetCountValues];
+    
+    [TWYourStatusBar setCustomView:nil];
+    statusBarView = nil;
+}
+
++ (BOOL)isRunning
+{
+    return (watchdogTimer != NULL);
 }
 
 + (void)setStallingThreshhold:(NSTimeInterval)time

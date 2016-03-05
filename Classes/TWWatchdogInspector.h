@@ -21,6 +21,13 @@
 + (void)stop;
 
 /**
+ * Check for activity
+ * @return YES If WatchdogInspector is running
+ *
+ */
++ (BOOL)isRunning;
+
+/**
  *  The timeout in seconds for mainthread stalling.
  *  If the mainthread stalls longer than this given time,
  *  an exception will be thrown.
