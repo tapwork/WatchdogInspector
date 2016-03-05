@@ -20,8 +20,8 @@ static TWWatchdogInspectorStatusBarView *statusBarView = nil;
 static int numberOfFrames = 0;
 static BOOL useLogs = YES;
 static CFTimeInterval lastMainThreadEntryTime = 0;
-static dispatch_source_t watchdogTimer;
-static CFRunLoopTimerRef mainthreadTimer;
+static dispatch_source_t watchdogTimer = NULL;
+static CFRunLoopTimerRef mainthreadTimer = NULL;
 static NSString *const kExceptionName = @"TWWatchdogInspectorStallingTimeout";
 
 
@@ -40,7 +40,6 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
     [self addRunLoopObserver];
     [self addWatchdogTimer];
     [self addMainThreadWatchdogCounter];
-
     if (!statusBarView) {
         [self setupStatusView];
     }
@@ -50,18 +49,18 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
 {
     if (watchdogTimer) {
         dispatch_source_cancel(watchdogTimer);
-        watchdogTimer = nil;
+        watchdogTimer = NULL;
     }
 
     if (mainthreadTimer) {
         CFRunLoopTimerInvalidate(mainthreadTimer);
-        mainthreadTimer = nil;
+        mainthreadTimer = NULL;
     }
     
     if (kObserverRef) {
         CFRunLoopRemoveObserver(CFRunLoopGetMain(), kObserverRef, kCFRunLoopCommonModes);
         CFRelease(kObserverRef);
-        kObserverRef = nil;
+        kObserverRef = NULL;
     }
     [self resetCountValues];
 }
