@@ -11,7 +11,7 @@
 static const double kBestFrameRate = 60.0;
 static const CGFloat kBarViewWidth = 10.0;
 static const CGFloat kBarViewPaddingX = 8.0;
-static const CGFloat kBarViewAnimationDuration = 2.0;
+static const NSTimeInterval kBarViewAnimationDuration = 2.0;
 static const CGFloat kLabelWidth = 150.0;
 
 @interface TWWatchdogInspectorStatusBarView ()
@@ -64,7 +64,6 @@ static const CGFloat kLabelWidth = 150.0;
     } else {
         self.fpsLabel.text = nil;
     }
-
     [self updateColorWithFPS:fps];
     [self addBarWithFPS:fps];
 }
@@ -99,6 +98,8 @@ static const CGFloat kLabelWidth = 150.0;
 
 - (void)addBarWithFPS:(double)fps
 {
+    NSTimeInterval duration = kBarViewAnimationDuration;
+
     CGFloat height = self.bounds.size.height * (fps / kBestFrameRate);
     CGFloat xPos = self.bounds.size.width;
     CGFloat yPos = self.bounds.size.height - height;
@@ -106,16 +107,13 @@ static const CGFloat kLabelWidth = 150.0;
     barView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.2];
     [self addSubview:barView];
     [self.barViews addObject:barView];
-    [self animateBarViews];
-}
 
-- (void)animateBarViews {
     [self bringSubviewToFront:self.fpsLabel];
     [self bringSubviewToFront:self.timeLabel];
     for (UIView *barView in self.barViews) {
         CGRect rect = barView.frame;
         rect.origin.x = rect.origin.x - rect.size.width - kBarViewPaddingX;
-        [UIView animateWithDuration:kBarViewAnimationDuration animations:^{
+        [UIView animateWithDuration:duration animations:^{
             barView.frame = rect;
         } completion:^(BOOL finished) {
             if (finished) {
