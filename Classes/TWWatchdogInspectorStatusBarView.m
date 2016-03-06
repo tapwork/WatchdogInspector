@@ -13,11 +13,12 @@ static const CGFloat kBarViewWidth = 10.0;
 static const CGFloat kBarViewPaddingX = 8.0;
 static const NSTimeInterval kBarViewAnimationDuration = 2.0;
 static const CGFloat kLabelWidth = 150.0;
+static NSTimeInterval lastUpdateFPSTIme = 0.0;
 
 @interface TWWatchdogInspectorStatusBarView ()
 @property (nonatomic, nonnull) UILabel *fpsLabel;
 @property (nonatomic, nonnull) UILabel *timeLabel;
-@property (nonatomic, nonnull) NSHashTable *barViews;
+@property (nonatomic, nonnull) NSHashTable <UIView*>*barViews;
 @end
 
 @implementation TWWatchdogInspectorStatusBarView
@@ -66,6 +67,7 @@ static const CGFloat kLabelWidth = 150.0;
     }
     [self updateColorWithFPS:fps];
     [self addBarWithFPS:fps];
+    lastUpdateFPSTIme = [NSDate timeIntervalSinceReferenceDate];
 }
 
 - (void)updateStallingTime:(NSTimeInterval)stallingTime
@@ -99,9 +101,11 @@ static const CGFloat kLabelWidth = 150.0;
 - (void)addBarWithFPS:(double)fps
 {
     NSTimeInterval duration = kBarViewAnimationDuration;
-
-    CGFloat height = self.bounds.size.height * (fps / kBestFrameRate);
+    if (lastUpdateFPSTIme > 0) {
+        duration = [NSDate timeIntervalSinceReferenceDate] - lastUpdateFPSTIme;
+    }
     CGFloat xPos = self.bounds.size.width;
+    CGFloat height = self.bounds.size.height * (fps / kBestFrameRate);
     CGFloat yPos = self.bounds.size.height - height;
     UIView *barView = [[UIView alloc] initWithFrame:CGRectMake(xPos, yPos, kBarViewWidth, height)];
     barView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.2];
@@ -111,6 +115,7 @@ static const CGFloat kLabelWidth = 150.0;
     [self bringSubviewToFront:self.fpsLabel];
     [self bringSubviewToFront:self.timeLabel];
     for (UIView *barView in self.barViews) {
+        [barView.layer removeAllAnimations];
         CGRect rect = barView.frame;
         rect.origin.x = rect.origin.x - rect.size.width - kBarViewPaddingX;
         [UIView animateWithDuration:duration animations:^{

@@ -12,12 +12,12 @@
 #import <YourStatusBar/TWYourStatusBar.h>
 #import "TWWatchdogInspectorStatusBarView.h"
 
-static const CFTimeInterval kUpdateWatchdogInterval = 2.0;
 static const double kBestWatchdogFramerate = 60.0;
 static NSString *const kExceptionName = @"TWWatchdogInspectorStallingTimeout";
 
 static TWWatchdogInspectorStatusBarView *statusBarView = nil;
 
+static CFTimeInterval updateWatchdogInterval = 2.0;
 static CFTimeInterval watchdogMaximumStallingTimeInterval = 3.0;
 static int numberOfFrames = 0;
 static BOOL useLogs = YES;
@@ -80,6 +80,11 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
     watchdogMaximumStallingTimeInterval = time;
 }
 
++ (void)setUpdateWatchdogInterval:(NSTimeInterval)time
+{
+    updateWatchdogInterval = time;
+}
+
 + (void)setUseLogs:(BOOL)use
 {
     useLogs = use;
@@ -108,9 +113,9 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
 {
     watchdogTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0));
     if (watchdogTimer) {
-        dispatch_source_set_timer(watchdogTimer, dispatch_walltime(NULL, 0), kUpdateWatchdogInterval * NSEC_PER_SEC, (kUpdateWatchdogInterval * NSEC_PER_SEC) / 10);
+        dispatch_source_set_timer(watchdogTimer, dispatch_walltime(NULL, 0), updateWatchdogInterval * NSEC_PER_SEC, (updateWatchdogInterval * NSEC_PER_SEC) / 10);
         dispatch_source_set_event_handler(watchdogTimer, ^{
-            double fps = numberOfFrames/kUpdateWatchdogInterval;
+            double fps = numberOfFrames/updateWatchdogInterval;
             numberOfFrames = 0;
             if (useLogs) {
                 NSLog(@"fps %.2f", fps);
