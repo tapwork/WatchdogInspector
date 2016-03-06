@@ -37,7 +37,9 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
 
 + (void)start
 {
-    NSLog(@"Start WatchdogInspector");
+    if (useLogs) {
+        NSLog(@"Start WatchdogInspector");
+    }
     [self addRunLoopObserver];
     [self addWatchdogTimer];
     [self addMainThreadWatchdogCounter];
@@ -48,7 +50,9 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
 
 + (void)stop
 {
-    NSLog(@"Stop WatchdogInspector");
+    if (useLogs) {
+        NSLog(@"Stop WatchdogInspector");
+    }
     if (watchdogTimer) {
         dispatch_source_cancel(watchdogTimer);
         watchdogTimer = NULL;
