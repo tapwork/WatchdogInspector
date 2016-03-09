@@ -1,6 +1,0 @@
-framework module YourStatusBar {
-  umbrella header "YourStatusBar-umbrella.h"
-
-  export *
-  module * { export * }
-}

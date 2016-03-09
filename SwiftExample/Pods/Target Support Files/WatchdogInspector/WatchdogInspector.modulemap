@@ -1,6 +1,0 @@
-framework module WatchdogInspector {
-  umbrella header "WatchdogInspector-umbrella.h"
-
-  export *
-  module * { export * }
-}
