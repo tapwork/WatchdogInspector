@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
     :git => 'https://github.com/tapwork/WatchdogInspector.git',
     :tag => s.version.to_s
   }
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '7.0'
   s.source_files = 'Classes/**.{h,m}'
   s.requires_arc = true
   s.dependency 'YourStatusBar', '~> 1.0.0'
