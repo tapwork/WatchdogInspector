@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'WatchdogInspector'
-  s.version  = '0.2.0'
+  s.version  = '0.2.1'
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.summary = 'Shows the current framerate (fps) in the status bar of your iOS app'
   s.description  = 'WatchdogInspector displays the current framerate of your iOS app in the device\'s status bar. Whenever your framerate drops your status bar will get red. If everything is fine your status bar is happy and is green. To detect unwanted main thread stalls you can set a custom watchdog timeout.'
