@@ -1,1 +1,5 @@
-pod "WatchdogInspector", :path => "../WatchdogInspector.podspec"
+platform :ios, '8.0'
+
+target "WatchdogExample" do
+    pod "WatchdogInspector", :path => "../WatchdogInspector.podspec"
+end
