@@ -1,12 +1,12 @@
 //
-//  TWWatchdogInspectorStatusBarView.m
+//  TWWatchdogInspectorViewController.m
 //  Pods
 //
 //  Created by Christian Menschel on 10/02/16.
 //
 //
 
-#import "TWWatchdogInspectorStatusBarView.h"
+#import "TWWatchdogInspectorViewController.h"
 
 static const double kBestFrameRate = 60.0;
 static const CGFloat kBarViewWidth = 10.0;
@@ -15,45 +15,42 @@ static const NSTimeInterval kBarViewAnimationDuration = 2.0;
 static const CGFloat kLabelWidth = 150.0;
 static NSTimeInterval lastUpdateFPSTIme = 0.0;
 
-@interface TWWatchdogInspectorStatusBarView ()
+@interface TWWatchdogInspectorViewController ()
 @property (nonatomic, nonnull) UILabel *fpsLabel;
 @property (nonatomic, nonnull) UILabel *timeLabel;
 @property (nonatomic, nonnull) NSHashTable <UIView*>*barViews;
 @end
 
-@implementation TWWatchdogInspectorStatusBarView
+@implementation TWWatchdogInspectorViewController
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        self.backgroundColor = [UIColor lightGrayColor];
+#pragma mark - View Life Cycle
 
-        UILabel *fpsLabel = [[UILabel alloc] init];
-        fpsLabel.backgroundColor = [UIColor clearColor];
-        fpsLabel.font = [UIFont boldSystemFontOfSize:14];
-        [self addSubview:fpsLabel];
-        _fpsLabel = fpsLabel;
-        
-        UILabel *timeLabel = [[UILabel alloc] init];
-        timeLabel.backgroundColor = [UIColor clearColor];
-        timeLabel.font = [UIFont boldSystemFontOfSize:14];
-        [self addSubview:timeLabel];
-        _timeLabel = timeLabel;
-        
-        _barViews = [NSHashTable weakObjectsHashTable];
-    }
-    return self;
+- (void)loadView {
+    [super loadView];
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    
+    UILabel *fpsLabel = [[UILabel alloc] init];
+    fpsLabel.backgroundColor = [UIColor clearColor];
+    fpsLabel.font = [UIFont boldSystemFontOfSize:14];
+    [self.view addSubview:fpsLabel];
+    _fpsLabel = fpsLabel;
+    
+    UILabel *timeLabel = [[UILabel alloc] init];
+    timeLabel.backgroundColor = [UIColor clearColor];
+    timeLabel.font = [UIFont boldSystemFontOfSize:14];
+    [self.view addSubview:timeLabel];
+    _timeLabel = timeLabel;
+    _barViews = [NSHashTable weakObjectsHashTable];
 }
 
 #pragma mark - Layout
 
-- (void)layoutSubviews
+- (void)viewWillLayoutSubviews
 {
-    [super layoutSubviews];
+    [super viewWillLayoutSubviews];
     
-    self.fpsLabel.frame = CGRectMake(4, 0, kLabelWidth, self.bounds.size.height);
-    self.timeLabel.frame = CGRectMake(CGRectGetMaxX(_fpsLabel.frame), 0, kLabelWidth, self.bounds.size.height);
+    self.fpsLabel.frame = CGRectMake(4, 0, kLabelWidth, self.view.bounds.size.height);
+    self.timeLabel.frame = CGRectMake(CGRectGetMaxX(_fpsLabel.frame), 0, kLabelWidth, self.view.bounds.size.height);
 }
 
 #pragma mark - Public methods
@@ -94,7 +91,7 @@ static NSTimeInterval lastUpdateFPSTIme = 0.0;
     }
 
     [UIView animateWithDuration:0.2 animations:^{
-        self.layer.backgroundColor = color.CGColor;
+        self.view.layer.backgroundColor = color.CGColor;
     }];
 }
 
@@ -104,16 +101,16 @@ static NSTimeInterval lastUpdateFPSTIme = 0.0;
     if (lastUpdateFPSTIme > 0) {
         duration = [NSDate timeIntervalSinceReferenceDate] - lastUpdateFPSTIme;
     }
-    CGFloat xPos = self.bounds.size.width;
-    CGFloat height = self.bounds.size.height * (fps / kBestFrameRate);
-    CGFloat yPos = self.bounds.size.height - height;
+    CGFloat xPos = self.view.bounds.size.width;
+    CGFloat height = self.view.bounds.size.height * (fps / kBestFrameRate);
+    CGFloat yPos = self.view.bounds.size.height - height;
     UIView *barView = [[UIView alloc] initWithFrame:CGRectMake(xPos, yPos, kBarViewWidth, height)];
     barView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.2];
-    [self addSubview:barView];
+    [self.view addSubview:barView];
     [self.barViews addObject:barView];
 
-    [self bringSubviewToFront:self.fpsLabel];
-    [self bringSubviewToFront:self.timeLabel];
+    [self.view bringSubviewToFront:self.fpsLabel];
+    [self.view bringSubviewToFront:self.timeLabel];
     for (UIView *barView in self.barViews) {
         [barView.layer removeAllAnimations];
         CGRect rect = barView.frame;

@@ -1,5 +1,5 @@
 //
-//  TWWatchdogInspectorStatusBarView.h
+//  TWWatchdogInspectorViewController.h
 //  Pods
 //
 //  Created by Christian Menschel on 10/02/16.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TWWatchdogInspectorStatusBarView : UIView
+@interface TWWatchdogInspectorViewController : UIViewController
 
 - (void)updateFPS:(double)fps;
 - (void)updateStallingTime:(NSTimeInterval)stallingTime;

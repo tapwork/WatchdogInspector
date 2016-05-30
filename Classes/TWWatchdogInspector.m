@@ -9,13 +9,12 @@
 #import "TWWatchdogInspector.h"
 #include <mach/mach_time.h>
 #import <execinfo.h>
-#import <YourStatusBar/TWYourStatusBar.h>
-#import "TWWatchdogInspectorStatusBarView.h"
+#import "TWWatchdogInspectorViewController.h"
 
 static const double kBestWatchdogFramerate = 60.0;
 static NSString *const kExceptionName = @"TWWatchdogInspectorStallingTimeout";
 
-static TWWatchdogInspectorStatusBarView *statusBarView = nil;
+static UIWindow *kInspectorWindow = nil;
 
 static CFTimeInterval updateWatchdogInterval = 2.0;
 static CFTimeInterval watchdogMaximumStallingTimeInterval = 3.0;
@@ -43,7 +42,7 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
     [self addRunLoopObserver];
     [self addWatchdogTimer];
     [self addMainThreadWatchdogCounter];
-    if (!statusBarView) {
+    if (!kInspectorWindow) {
         [self setupStatusView];
     }
 }
@@ -69,9 +68,8 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
         kObserverRef = NULL;
     }
     [self resetCountValues];
-    
-    [TWYourStatusBar setCustomView:nil];
-    statusBarView = nil;
+    [kInspectorWindow setHidden:YES];
+    kInspectorWindow = nil;
 }
 
 + (BOOL)isRunning
@@ -126,7 +124,7 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
             }
             [self throwExceptionForStallingIfNeeded];
             dispatch_async(dispatch_get_main_queue(), ^{
-                [statusBarView updateFPS:fps];
+                [((TWWatchdogInspectorViewController *)kInspectorWindow.rootViewController) updateFPS:fps];
             });
         });
         dispatch_resume(watchdogTimer);
@@ -170,11 +168,13 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
 
 + (void)setupStatusView
 {
-    TWWatchdogInspectorStatusBarView *view = [[TWWatchdogInspectorStatusBarView alloc] init];
     CGSize size = [UIApplication sharedApplication].statusBarFrame.size;
-    view.frame = CGRectMake(0, 0, size.width, size.height);
-    [TWYourStatusBar setCustomView:view];
-    statusBarView = view;
+    CGRect frame = CGRectMake(0, 0, size.width, size.height);
+    UIWindow *window = [[UIWindow alloc] initWithFrame:frame];
+    window.rootViewController = [[TWWatchdogInspectorViewController alloc] init];
+    [window setHidden:NO];
+    window.windowLevel = UIWindowLevelStatusBar + 50;
+    kInspectorWindow = window;
 }
 
 #pragma mark - Life Cycle

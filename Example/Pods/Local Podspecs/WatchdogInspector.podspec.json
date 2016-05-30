@@ -20,10 +20,5 @@
     "ios": "7.0"
   },
   "source_files": "Classes/**.{h,m}",
-  "requires_arc": true,
-  "dependencies": {
-    "YourStatusBar": [
-      "~> 1.0.0"
-    ]
-  }
+  "requires_arc": true
 }
