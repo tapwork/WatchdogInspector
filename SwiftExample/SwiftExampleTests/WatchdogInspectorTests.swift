@@ -29,10 +29,9 @@ class WatchdogInspectorTests: XCTestCase {
         XCTAssertTrue(TWWatchdogInspector.isRunning())
     }
 
-    func testStatusBar() {
+    func testWindow() {
         TWWatchdogInspector.start()
-        let statusBarWindow = UIApplication.sharedApplication() .valueForKey("_statusBarWindow")
-        let subView = statusBarWindow?.subviews.first
-        XCTAssertTrue(subView is TWWatchdogInspectorStatusBarView)
+        let window = UIApplication.sharedApplication().windows.last
+        XCTAssertTrue(window?.rootViewController is TWWatchdogInspectorViewController)
     }
 }
