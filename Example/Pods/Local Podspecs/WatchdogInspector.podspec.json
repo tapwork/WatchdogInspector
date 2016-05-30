@@ -1,6 +1,6 @@
 {
   "name": "WatchdogInspector",
-  "version": "0.2.1",
+  "version": "0.3",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -14,10 +14,10 @@
   },
   "source": {
     "git": "https://github.com/tapwork/WatchdogInspector.git",
-    "tag": "0.2.1"
+    "tag": "0.3"
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
   "source_files": "Classes/**.{h,m}",
   "requires_arc": true

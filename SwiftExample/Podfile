@@ -1,7 +1,8 @@
-platform :ios, "8.0"
 use_frameworks!
 
-pod "WatchdogInspector", :path => "../WatchdogInspector.podspec"
+target "SwiftExample" do
+  pod 'WatchdogInspector', :path => "../WatchdogInspector.podspec"
+end
 
 target "SwiftExampleTests" do
   pod 'WatchdogInspector', :path => "../WatchdogInspector.podspec"

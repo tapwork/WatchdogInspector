@@ -84,8 +84,8 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/WatchdogInspector-iOS9.2/WatchdogInspector.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/WatchdogInspector-iOS8.0/WatchdogInspector.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/WatchdogInspector-iOS9.2/WatchdogInspector.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/WatchdogInspector-iOS8.0/WatchdogInspector.framework"
 fi
