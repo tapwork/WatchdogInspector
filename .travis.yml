@@ -1,4 +1,6 @@
 osx_image: xcode7.2
 language: objective-c
-before_install: rake bootstrap
+before_install:
+- gem install bundler
+- rake bootstrap
 script: rake spec
