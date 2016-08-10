@@ -18,6 +18,7 @@ static UIWindow *kInspectorWindow = nil;
 
 static CFTimeInterval updateWatchdogInterval = 2.0;
 static CFTimeInterval watchdogMaximumStallingTimeInterval = 3.0;
+static BOOL enableWatchdogStallingException = YES;
 static int numberOfFrames = 0;
 static BOOL useLogs = YES;
 static CFTimeInterval lastMainThreadEntryTime = 0;
@@ -80,6 +81,11 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
 + (void)setStallingThreshhold:(NSTimeInterval)time
 {
     watchdogMaximumStallingTimeInterval = time;
+}
+
++ (void)setEnableMainthreadStallingException:(BOOL)enable
+{
+    enableWatchdogStallingException = enable;
 }
 
 + (void)setUpdateWatchdogInterval:(NSTimeInterval)time
@@ -149,13 +155,15 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
 
 + (void)throwExceptionForStallingIfNeeded
 {
-    CFTimeInterval time = CACurrentMediaTime() - lastMainThreadEntryTime;
-    if (time > watchdogMaximumStallingTimeInterval && lastMainThreadEntryTime > 0) {
-        NSString *reason = [NSString stringWithFormat:@"Watchdog timeout: Mainthread stalled for %.2f seconds", time];
-        NSException *excetopion = [NSException exceptionWithName:kExceptionName
-                                                          reason:reason
-                                                        userInfo:nil];
-        [excetopion raise];
+    if (enableWatchdogStallingException) {
+        CFTimeInterval time = CACurrentMediaTime() - lastMainThreadEntryTime;
+        if (time > watchdogMaximumStallingTimeInterval && lastMainThreadEntryTime > 0) {
+            NSString *reason = [NSString stringWithFormat:@"Watchdog timeout: Mainthread stalled for %.2f seconds", time];
+            NSException *excetopion = [NSException exceptionWithName:kExceptionName
+                                                              reason:reason
+                                                            userInfo:nil];
+            [excetopion raise];
+        }
     }
 }
 

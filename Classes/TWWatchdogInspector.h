@@ -36,6 +36,14 @@
 + (void)setStallingThreshhold:(NSTimeInterval)time;
 
 /**
+ *  Tell WatchdogInspector if you want to disable or enable
+ *  the stalling exceptions.
+ *  Default is YES (turned on)
+ *  @param enable If you want to enable or disable the stalling exceptions.
+ */
++ (void)setEnableMainthreadStallingException:(BOOL)enable;
+
+/**
  *  Set the update time interval for the background thread timer.
  *  The background thread timer counts the frames that have been set 
  *  by the main thread in that time interval
