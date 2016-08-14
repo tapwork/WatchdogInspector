@@ -28,7 +28,8 @@ You can see the example project how to setup and run `WatchdogInspector`
 Make sure that you **don't** use `WatchdogInspector` in production.
 
 ##### [Objective-C](README.md)  |  Swift
-Start `WatchdogInspector` after launch or whenever you want.
+#### Start 
+After launch or whenever you want.
 ```Swift
 import WatchdogInspector
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -36,14 +37,21 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
         return true
 }
 ```
+####Stop
 To stop it just call
 ```Swift
 TWWatchdogInspector.stop()
 ```
-You can set a custom watchdog timeout by calling (Default: 3 seconds)
+#### Main Thread Stalling Exceptions
+You can set a custom watchdog timeout for stalling exceptions (Default: 3 seconds)
 ```Swift
 TWWatchdogInspector.setStallingThreshhold(10.0)
 ```
+You could also disable the Main Thread exceptions
+```Swift
+TWWatchdogInspector.setEnableMainthreadStallingException(false)
+```
+####Logging
 To log all measured framerates you can log them in the console by calling (Default: on)
 ```Swift
 TWWatchdogInspector.setUseLogs(true)
