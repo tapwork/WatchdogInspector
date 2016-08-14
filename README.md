@@ -36,14 +36,23 @@ Start `WatchdogInspector` after launch or whenever you want.
     return YES;
 }
 ```
+
+####Stop
 To stop it just call
 ```Objective-C
 [TWWatchdogInspector stop]
 ```
-You can set a custom watchdog timeout by calling (Default: 3 seconds)
+#### Main Thread Stalling Exceptions
+You can set a custom watchdog timeout for stalling exceptions (Default: 3 seconds)
 ```Objective-C
 [TWWatchdogInspector setStallingThreshhold:10.0];
 ```
+You could also disable the Main Thread exceptions
+```Objective-C
+[TWWatchdogInspector setEnableMainthreadStallingException:NO];
+```
+
+####Logging
 To log all measured framerates you can log them in the console by calling (Default: on)
 ```Objective-C
 [TWWatchdogInspector setUseLogs:YES];
