@@ -29,7 +29,7 @@ and run `pod install`
 You can see the example project how to setup and run `WatchdogInspector`
 Make sure that you **don't** use `WatchdogInspector` in production.
 
-##### [Objective-C](README.md)  |  Swift
+##### [Objective-C](README_objc.md)  |  Swift
 #### Start 
 After launch or whenever you want.
 ```Swift
