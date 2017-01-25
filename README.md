@@ -20,7 +20,7 @@ To detect unwanted main thread stalls you can set a custom watchdog timeout.
 
 ![screencast](screencast.gif)
 
-## Usage
+## Install
 #### CocoaPods
 ```
 pod "WatchdogInspector"
@@ -37,6 +37,7 @@ Specify in Cartfile:
 github "tapwork/WatchdogInspector"
 ```
 
+## Usage
 ##### [Objective-C](README_objc.md)  |  Swift
 #### Start 
 After launch or whenever you want.
