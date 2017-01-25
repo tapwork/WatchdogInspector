@@ -21,13 +21,21 @@ To detect unwanted main thread stalls you can set a custom watchdog timeout.
 ![screencast](screencast.gif)
 
 ## Usage
-Install via CocoaPods
+#### CocoaPods
 ```
 pod "WatchdogInspector"
 ```
 and run `pod install`
 You can see the example project how to setup and run `WatchdogInspector`
 Make sure that you **don't** use `WatchdogInspector` in production.
+
+#### Carthage 
+You can use [Carthage](https://github.com/Carthage/Carthage). 
+Specify in Cartfile:
+
+```ruby
+github "tapwork/WatchdogInspector"
+```
 
 ##### [Objective-C](README_objc.md)  |  Swift
 #### Start 
