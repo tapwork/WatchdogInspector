@@ -31,7 +31,7 @@ class WatchdogInspectorTests: XCTestCase {
 
     func testWindow() {
         TWWatchdogInspector.start()
-        let window = UIApplication.sharedApplication().windows.last
+        let window = UIApplication.shared.windows.last
         XCTAssertTrue(window?.rootViewController is TWWatchdogInspectorViewController)
     }
 }
