@@ -5,6 +5,7 @@
 [![Cocoapods Version](http://img.shields.io/cocoapods/v/WatchdogInspector.svg?style=flat)](https://github.com/tapwork/WatchdogInspector/blob/master/WatchdogInspector.podspec)
 [![](http://img.shields.io/cocoapods/l/WatchdogInspector.svg?style=flat)](https://github.com/tapwork/WatchdogInspector/blob/master/LICENSE)
 [![CocoaPods Platform](http://img.shields.io/cocoapods/p/WatchdogInspector.svg?style=flat)]()
+[![Twitter](https://img.shields.io/badge/twitter-@cmenschel-blue.svg?style=flat)](http://twitter.com/cmenschel)
 
 WatchdogInspector counts your app's framerate and displays the fps in the status bar.
 The coloured status bar lets you know when your framerate drops below 60 fps.
