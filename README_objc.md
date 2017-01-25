@@ -29,34 +29,35 @@ and run `pod install`
 You can see the example project how to setup and run `WatchdogInspector`
 Make sure that you **don't** use `WatchdogInspector` in production.
 
-##### [Objective-C](README.md)  |  Swift
-#### Start 
-After launch or whenever you want.
-```Swift
-import WatchdogInspector
-func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        TWWatchdogInspector.start()
-        return true
+##### Objective-C  |  [Swift](README_SWIFT.md)
+Start `WatchdogInspector` after launch or whenever you want.
+```Objective-C
+#import <WatchdogInspector/TWWatchdogInspector.h>
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [TWWatchdogInspector start];
+    return YES;
 }
 ```
+
 ####Stop
 To stop it just call
-```Swift
-TWWatchdogInspector.stop()
+```Objective-C
+[TWWatchdogInspector stop]
 ```
 #### Main Thread Stalling Exceptions
 You can set a custom watchdog timeout for stalling exceptions (Default: 3 seconds)
-```Swift
-TWWatchdogInspector.setStallingThreshhold(10.0)
+```Objective-C
+[TWWatchdogInspector setStallingThreshhold:10.0];
 ```
 You could also disable the Main Thread exceptions
-```Swift
-TWWatchdogInspector.setEnableMainthreadStallingException(false)
+```Objective-C
+[TWWatchdogInspector setEnableMainthreadStallingException:NO];
 ```
+
 ####Logging
 To log all measured framerates you can log them in the console by calling (Default: on)
-```Swift
-TWWatchdogInspector.setUseLogs(true)
+```Objective-C
+[TWWatchdogInspector setUseLogs:YES];
 ```
 
 ## How it works
