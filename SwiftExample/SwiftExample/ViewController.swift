@@ -15,7 +15,6 @@ class ViewController: UITableViewController {
         self.edgesForExtendedLayout = UIRectEdge()
     }
 
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
