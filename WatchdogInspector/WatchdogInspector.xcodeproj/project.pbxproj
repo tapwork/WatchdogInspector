@@ -12,6 +12,7 @@
 		DAB25AB41E38A5F900317996 /* TWWatchdogInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB25AB01E38A5F900317996 /* TWWatchdogInspector.m */; };
 		DAB25AB51E38A5F900317996 /* TWWatchdogInspectorViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = DAB25AB11E38A5F900317996 /* TWWatchdogInspectorViewController.h */; };
 		DAB25AB61E38A5F900317996 /* TWWatchdogInspectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB25AB21E38A5F900317996 /* TWWatchdogInspectorViewController.m */; };
+		DD529AD11F9DC810006424F3 /* TWWatchdogInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = DAB25AAF1E38A5F900317996 /* TWWatchdogInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAB25AA91E38A5D500317996 /* WatchdogInspector.h in Headers */,
+				DD529AD11F9DC810006424F3 /* TWWatchdogInspector.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
