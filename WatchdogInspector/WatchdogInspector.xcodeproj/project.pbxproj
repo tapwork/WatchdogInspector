@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D14D9978211C428B004DC052 /* WatchdogInspector_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = D14D9976211C428B004DC052 /* WatchdogInspector_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D14D997C211C42FC004DC052 /* TWWatchdogInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = DAB25AAF1E38A5F900317996 /* TWWatchdogInspector.h */; };
+		D14D997D211C42FC004DC052 /* TWWatchdogInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB25AB01E38A5F900317996 /* TWWatchdogInspector.m */; };
+		D14D997E211C42FC004DC052 /* TWWatchdogInspectorViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DAB25AB11E38A5F900317996 /* TWWatchdogInspectorViewController.h */; };
+		D14D997F211C42FC004DC052 /* TWWatchdogInspectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB25AB21E38A5F900317996 /* TWWatchdogInspectorViewController.m */; };
 		DAB25AA91E38A5D500317996 /* WatchdogInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = DAB25AA71E38A5D500317996 /* WatchdogInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAB25AB31E38A5F900317996 /* TWWatchdogInspector.h in Sources */ = {isa = PBXBuildFile; fileRef = DAB25AAF1E38A5F900317996 /* TWWatchdogInspector.h */; };
 		DAB25AB41E38A5F900317996 /* TWWatchdogInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB25AB01E38A5F900317996 /* TWWatchdogInspector.m */; };
@@ -16,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D14D9974211C428B004DC052 /* WatchdogInspector_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WatchdogInspector_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D14D9976211C428B004DC052 /* WatchdogInspector_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WatchdogInspector_tvOS.h; sourceTree = "<group>"; };
+		D14D9977211C428B004DC052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAB25AA41E38A5D500317996 /* WatchdogInspector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WatchdogInspector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB25AA71E38A5D500317996 /* WatchdogInspector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WatchdogInspector.h; sourceTree = "<group>"; };
 		DAB25AA81E38A5D500317996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -26,6 +34,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D14D9971211C428B004DC052 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DAB25AA01E38A5D500317996 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -36,10 +51,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D14D9975211C428B004DC052 /* WatchdogInspector-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				D14D9976211C428B004DC052 /* WatchdogInspector_tvOS.h */,
+				D14D9977211C428B004DC052 /* Info.plist */,
+			);
+			path = "WatchdogInspector-tvOS";
+			sourceTree = "<group>";
+		};
 		DAB25A9A1E38A5D500317996 = {
 			isa = PBXGroup;
 			children = (
 				DAB25AA61E38A5D500317996 /* WatchdogInspector */,
+				D14D9975211C428B004DC052 /* WatchdogInspector-tvOS */,
 				DAB25AA51E38A5D500317996 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				DAB25AA41E38A5D500317996 /* WatchdogInspector.framework */,
+				D14D9974211C428B004DC052 /* WatchdogInspector_tvOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,6 +94,16 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		D14D996F211C428B004DC052 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D14D997C211C42FC004DC052 /* TWWatchdogInspector.h in Headers */,
+				D14D9978211C428B004DC052 /* WatchdogInspector_tvOS.h in Headers */,
+				D14D997E211C42FC004DC052 /* TWWatchdogInspectorViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DAB25AA11E38A5D500317996 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -80,6 +116,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		D14D9973211C428B004DC052 /* WatchdogInspector-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D14D997B211C428B004DC052 /* Build configuration list for PBXNativeTarget "WatchdogInspector-tvOS" */;
+			buildPhases = (
+				D14D996F211C428B004DC052 /* Headers */,
+				D14D9970211C428B004DC052 /* Sources */,
+				D14D9971211C428B004DC052 /* Frameworks */,
+				D14D9972211C428B004DC052 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WatchdogInspector-tvOS";
+			productName = "WatchdogInspector-tvOS";
+			productReference = D14D9974211C428B004DC052 /* WatchdogInspector_tvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		DAB25AA31E38A5D500317996 /* WatchdogInspector */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAB25AAC1E38A5D500317996 /* Build configuration list for PBXNativeTarget "WatchdogInspector" */;
@@ -107,6 +161,10 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "TAPWORK GmbH";
 				TargetAttributes = {
+					D14D9973211C428B004DC052 = {
+						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
+					};
 					DAB25AA31E38A5D500317996 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -126,11 +184,19 @@
 			projectRoot = "";
 			targets = (
 				DAB25AA31E38A5D500317996 /* WatchdogInspector */,
+				D14D9973211C428B004DC052 /* WatchdogInspector-tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D14D9972211C428B004DC052 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DAB25AA21E38A5D500317996 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -141,6 +207,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D14D9970211C428B004DC052 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D14D997F211C42FC004DC052 /* TWWatchdogInspectorViewController.m in Sources */,
+				D14D997D211C42FC004DC052 /* TWWatchdogInspector.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DAB25A9F1E38A5D500317996 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -155,6 +230,79 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		D14D9979211C428B004DC052 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "WatchdogInspector-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "eu.notsobright.WatchdogInspector-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Debug;
+		};
+		D14D997A211C428B004DC052 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "WatchdogInspector-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "eu.notsobright.WatchdogInspector-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Release;
+		};
 		DAB25AAA1E38A5D500317996 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -293,6 +441,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D14D997B211C428B004DC052 /* Build configuration list for PBXNativeTarget "WatchdogInspector-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D14D9979211C428B004DC052 /* Debug */,
+				D14D997A211C428B004DC052 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DAB25A9E1E38A5D500317996 /* Build configuration list for PBXProject "WatchdogInspector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -309,6 +466,7 @@
 				DAB25AAE1E38A5D500317996 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

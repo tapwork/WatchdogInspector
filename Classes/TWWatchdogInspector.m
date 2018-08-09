@@ -176,12 +176,21 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
 
 + (void)setupStatusView
 {
-    CGSize size = [UIApplication sharedApplication].statusBarFrame.size;
+#if TARGET_OS_IOS
+    CGRect statusBarFrame = [UIApplication sharedApplication].statusBarFrame;
+#elif TARGET_OS_TV
+    CGRect statusBarFrame = CGRectMake(0, 0, 1920, 20);
+#endif
+    CGSize size =  statusBarFrame.size;
     CGRect frame = CGRectMake(0, 0, size.width, size.height);
     UIWindow *window = [[UIWindow alloc] initWithFrame:frame];
     window.rootViewController = [[TWWatchdogInspectorViewController alloc] init];
     [window setHidden:NO];
+#if TARGET_OS_IOS
     window.windowLevel = UIWindowLevelStatusBar + 50;
+#elif TARGET_OS_TV
+    window.windowLevel = UIWindowLevelNormal + 50;
+#endif
     kInspectorWindow = window;
 }
 
