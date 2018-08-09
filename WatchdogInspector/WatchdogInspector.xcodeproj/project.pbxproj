@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D14D9978211C428B004DC052 /* WatchdogInspector_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = D14D9976211C428B004DC052 /* WatchdogInspector_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D14D997C211C42FC004DC052 /* TWWatchdogInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = DAB25AAF1E38A5F900317996 /* TWWatchdogInspector.h */; };
+		D14D997C211C42FC004DC052 /* TWWatchdogInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = DAB25AAF1E38A5F900317996 /* TWWatchdogInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D14D997D211C42FC004DC052 /* TWWatchdogInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB25AB01E38A5F900317996 /* TWWatchdogInspector.m */; };
-		D14D997E211C42FC004DC052 /* TWWatchdogInspectorViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DAB25AB11E38A5F900317996 /* TWWatchdogInspectorViewController.h */; };
+		D14D997E211C42FC004DC052 /* TWWatchdogInspectorViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DAB25AB11E38A5F900317996 /* TWWatchdogInspectorViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D14D997F211C42FC004DC052 /* TWWatchdogInspectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB25AB21E38A5F900317996 /* TWWatchdogInspectorViewController.m */; };
 		DAB25AA91E38A5D500317996 /* WatchdogInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = DAB25AA71E38A5D500317996 /* WatchdogInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAB25AB31E38A5F900317996 /* TWWatchdogInspector.h in Sources */ = {isa = PBXBuildFile; fileRef = DAB25AAF1E38A5F900317996 /* TWWatchdogInspector.h */; };
@@ -98,8 +98,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D14D997C211C42FC004DC052 /* TWWatchdogInspector.h in Headers */,
 				D14D9978211C428B004DC052 /* WatchdogInspector_tvOS.h in Headers */,
+				D14D997C211C42FC004DC052 /* TWWatchdogInspector.h in Headers */,
 				D14D997E211C42FC004DC052 /* TWWatchdogInspectorViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
