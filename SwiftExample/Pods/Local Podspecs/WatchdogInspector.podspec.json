@@ -17,7 +17,8 @@
     "tag": "1.2.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "8.0",
+    "tvos": "10.2"
   },
   "source_files": "Classes/**.{h,m}",
   "requires_arc": true

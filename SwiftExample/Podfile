@@ -7,3 +7,7 @@ end
 target "SwiftExampleTests" do
   pod 'WatchdogInspector', :path => "../WatchdogInspector.podspec"
 end
+
+target "SwiftExample_tvOS" do
+    pod 'WatchdogInspector', :path => "../WatchdogInspector.podspec"
+end
