@@ -1,5 +1,5 @@
 PODS:
-  - WatchdogInspector (1.2.0)
+  - WatchdogInspector (1.3.0)
 
 DEPENDENCIES:
   - WatchdogInspector (from `../WatchdogInspector.podspec`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../WatchdogInspector.podspec"
 
 SPEC CHECKSUMS:
-  WatchdogInspector: 5502a3128fdbf9ac83d54ca398a236978e96acc6
+  WatchdogInspector: 1495917a93764ac454995fca62552472a3eaac00
 
 PODFILE CHECKSUM: 2b06df6ad5dc10642faa67d9bff5a0cf969b38f8
 
