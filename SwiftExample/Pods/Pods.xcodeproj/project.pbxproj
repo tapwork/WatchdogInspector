@@ -851,7 +851,7 @@
 			};
 			name = Release;
 		};
-		82F8A341F27138D28DF3607CAE213C29 /* Debug */ = {
+		9CB2F1B21235337ED02F4B7B7AC6AD8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 943579422C26986B7D461DD623887BEF /* WatchdogInspector-tvOS10.2.xcconfig */;
 			buildSettings = {
@@ -874,38 +874,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 10.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8D99E2FA42D642DF07E0775834E77790 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 943579422C26986B7D461DD623887BEF /* WatchdogInspector-tvOS10.2.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/WatchdogInspector-tvOS10.2/WatchdogInspector-tvOS10.2-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/WatchdogInspector-tvOS10.2/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/WatchdogInspector-tvOS10.2/WatchdogInspector-tvOS10.2.modulemap";
-				PRODUCT_MODULE_NAME = WatchdogInspector;
-				PRODUCT_NAME = WatchdogInspector;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.2;
 				VALIDATE_PRODUCT = YES;
@@ -1112,6 +1081,37 @@
 			};
 			name = Debug;
 		};
+		FC1C3EAF4097CA03C1DC6A4B7C7A3D12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 943579422C26986B7D461DD623887BEF /* WatchdogInspector-tvOS10.2.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WatchdogInspector-tvOS10.2/WatchdogInspector-tvOS10.2-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WatchdogInspector-tvOS10.2/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WatchdogInspector-tvOS10.2/WatchdogInspector-tvOS10.2.modulemap";
+				PRODUCT_MODULE_NAME = WatchdogInspector;
+				PRODUCT_NAME = WatchdogInspector;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		FE6C6EA02885DDA94A1B073CE1E959F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D67D4A53EB3814E19E5F9DE8026C6478 /* WatchdogInspector-iOS10.2.xcconfig */;
@@ -1167,8 +1167,8 @@
 		21F04B927B36AD8AF64AAD93544124C0 /* Build configuration list for PBXNativeTarget "WatchdogInspector-tvOS10.2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				82F8A341F27138D28DF3607CAE213C29 /* Debug */,
-				8D99E2FA42D642DF07E0775834E77790 /* Release */,
+				FC1C3EAF4097CA03C1DC6A4B7C7A3D12 /* Debug */,
+				9CB2F1B21235337ED02F4B7B7AC6AD8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
