@@ -179,7 +179,7 @@ static void mainthreadTimerCallback(CFRunLoopTimerRef timer, void *info)
 #if TARGET_OS_IOS
     CGRect statusBarFrame = [UIApplication sharedApplication].statusBarFrame;
 #elif TARGET_OS_TV
-    CGRect statusBarFrame = CGRectMake(0, 0, 1920, 20);
+    CGRect statusBarFrame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height / 54);
 #endif
     CGSize size =  statusBarFrame.size;
     CGRect frame = CGRectMake(0, 0, size.width, size.height);

@@ -14,8 +14,8 @@
 		52F680401C88413D0049100A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F6803E1C88413D0049100A /* LaunchScreen.storyboard */; };
 		57ACA6C4B3BF5FF8CE32FBAD /* Pods_SwiftExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0643C6C327AF47102FAE677C /* Pods_SwiftExample.framework */; };
 		7E59E3454ABA19045AA4BA59 /* Pods_SwiftExample_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD8A2BE4575692F551310824 /* Pods_SwiftExample_tvOS.framework */; };
-		D15DD9CA211C67B4007E85A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15DD9C9211C67B4007E85A5 /* AppDelegate.swift */; };
-		D15DD9CC211C67B4007E85A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15DD9CB211C67B4007E85A5 /* ViewController.swift */; };
+		D154ED3B212428BE0011A546 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F680351C88413D0049100A /* AppDelegate.swift */; };
+		D154ED3C212428C60011A546 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F680371C88413D0049100A /* ViewController.swift */; };
 		D15DD9CF211C67B4007E85A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D15DD9CD211C67B4007E85A5 /* Main.storyboard */; };
 		D15DD9D1211C67B5007E85A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D15DD9D0211C67B5007E85A5 /* Assets.xcassets */; };
 		DAB1A8C11C8D700100DB140C /* WatchdogInspectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1A8C01C8D700100DB140C /* WatchdogInspectorTests.swift */; };
@@ -104,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				52F680341C88413D0049100A /* SwiftExample */,
-				D15DD9C8211C67B4007E85A5 /* SwiftExample_tvOS */,
 				DAB1A8B61C8D6FBF00DB140C /* SwiftExampleTests */,
 				52F680331C88413D0049100A /* Products */,
 				3E4A0504B6B109A2363166EE /* Frameworks */,
@@ -125,12 +124,10 @@
 		52F680341C88413D0049100A /* SwiftExample */ = {
 			isa = PBXGroup;
 			children = (
+				D154ED3A2124286F0011A546 /* iOS Resources */,
+				D15DD9C8211C67B4007E85A5 /* tvOS Resources */,
 				52F680351C88413D0049100A /* AppDelegate.swift */,
 				52F680371C88413D0049100A /* ViewController.swift */,
-				52F680391C88413D0049100A /* Main.storyboard */,
-				52F6803C1C88413D0049100A /* Assets.xcassets */,
-				52F6803E1C88413D0049100A /* LaunchScreen.storyboard */,
-				52F680411C88413D0049100A /* Info.plist */,
 			);
 			path = SwiftExample;
 			sourceTree = "<group>";
@@ -148,7 +145,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		D15DD9C8211C67B4007E85A5 /* SwiftExample_tvOS */ = {
+		D154ED3A2124286F0011A546 /* iOS Resources */ = {
+			isa = PBXGroup;
+			children = (
+				52F680391C88413D0049100A /* Main.storyboard */,
+				52F6803C1C88413D0049100A /* Assets.xcassets */,
+				52F6803E1C88413D0049100A /* LaunchScreen.storyboard */,
+				52F680411C88413D0049100A /* Info.plist */,
+			);
+			path = "iOS Resources";
+			sourceTree = "<group>";
+		};
+		D15DD9C8211C67B4007E85A5 /* tvOS Resources */ = {
 			isa = PBXGroup;
 			children = (
 				D15DD9C9211C67B4007E85A5 /* AppDelegate.swift */,
@@ -157,7 +165,7 @@
 				D15DD9D0211C67B5007E85A5 /* Assets.xcassets */,
 				D15DD9D2211C67B5007E85A5 /* Info.plist */,
 			);
-			path = SwiftExample_tvOS;
+			path = "tvOS Resources";
 			sourceTree = "<group>";
 		};
 		DAB1A8B61C8D6FBF00DB140C /* SwiftExampleTests */ = {
@@ -432,8 +440,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D15DD9CC211C67B4007E85A5 /* ViewController.swift in Sources */,
-				D15DD9CA211C67B4007E85A5 /* AppDelegate.swift in Sources */,
+				D154ED3C212428C60011A546 /* ViewController.swift in Sources */,
+				D154ED3B212428BE0011A546 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,7 +603,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3F89ZY3P47;
-				INFOPLIST_FILE = SwiftExample/Info.plist;
+				INFOPLIST_FILE = "SwiftExample/iOS Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "eu.notsobright.Video-App";
@@ -611,7 +619,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3F89ZY3P47;
-				INFOPLIST_FILE = SwiftExample/Info.plist;
+				INFOPLIST_FILE = "SwiftExample/iOS Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "eu.notsobright.Video-App";
@@ -644,7 +652,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3F89ZY3P47;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = SwiftExample_tvOS/Info.plist;
+				INFOPLIST_FILE = "SwiftExample/tvOS Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -681,7 +689,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3F89ZY3P47;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = SwiftExample_tvOS/Info.plist;
+				INFOPLIST_FILE = "SwiftExample/tvOS Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "eu.notsobright.Video-App";
