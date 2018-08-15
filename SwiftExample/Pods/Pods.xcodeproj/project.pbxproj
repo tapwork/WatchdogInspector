@@ -8,19 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		027CB4379C3B732099B7CE8331585206 /* TWWatchdogInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = A220AF910F49E397440F002785580D76 /* TWWatchdogInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04B5A3C3B675207CF14943DC651D0777 /* WatchdogInspector-iOS9.2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A06CD7460BA1FAE9539882CD2C2E014F /* WatchdogInspector-iOS9.2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04B5A3C3B675207CF14943DC651D0777 /* WatchdogInspector-iOS9.2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98B9F58C84BF98286625EFA6AA41462F /* WatchdogInspector-iOS9.2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E26A2CE62C6B9ABF8B92D16924F88F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE937F70D5DBF1A7F09641FDCE20931 /* Foundation.framework */; };
 		113622B7A357C3A1A395FF54319D3BF0 /* TWWatchdogInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = A220AF910F49E397440F002785580D76 /* TWWatchdogInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1216FF66CF4B27D302009F5B3568538D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE937F70D5DBF1A7F09641FDCE20931 /* Foundation.framework */; };
 		252369E11D6912A6EFD0875FAB9472D0 /* TWWatchdogInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = E50720D0BAA11A8CEE199C1269791BA0 /* TWWatchdogInspector.m */; };
-		283E9815B41CA0F953ED8403D1223337 /* WatchdogInspector-tvOS10.2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 472525A009E011A148CE0133A13B0E51 /* WatchdogInspector-tvOS10.2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		283E9815B41CA0F953ED8403D1223337 /* WatchdogInspector-tvOS10.2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C6531E36ED8F1465C1FA6F58093073DD /* WatchdogInspector-tvOS10.2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C0AD2D5156D418DAE88E51B73041252 /* TWWatchdogInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = E50720D0BAA11A8CEE199C1269791BA0 /* TWWatchdogInspector.m */; };
 		3A15039AFAFD37FEE2A430BFCB76B715 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158063BD094C9B7A1837A1C7B0E3B298 /* Foundation.framework */; };
 		3A8A5998D009750EC34B83F0E0A447DE /* TWWatchdogInspectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352A4D0EB45EBF956C9F46F236780E89 /* TWWatchdogInspectorViewController.m */; };
 		5077D3AB786EF3994E13A50F7C80C384 /* Pods-SwiftExample_tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8348C2C1FD3A704C08AB7489398D1432 /* Pods-SwiftExample_tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		52EB0F7C458DF726BC2FE7DFDA77EA33 /* WatchdogInspector-iOS10.2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 486237D45F148B1B5B529D9AE3897468 /* WatchdogInspector-iOS10.2-dummy.m */; };
+		52EB0F7C458DF726BC2FE7DFDA77EA33 /* WatchdogInspector-iOS10.2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AD0DC2E5885493CC8A86B453E24779 /* WatchdogInspector-iOS10.2-dummy.m */; };
 		5A0D59157B62BC56235BF6574B5129DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE937F70D5DBF1A7F09641FDCE20931 /* Foundation.framework */; };
-		5B248026184D016F3E72F2D102D374BF /* WatchdogInspector-iOS10.2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B624FE5C1226CA49C4C613004D4D233 /* WatchdogInspector-iOS10.2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B248026184D016F3E72F2D102D374BF /* WatchdogInspector-iOS10.2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0172D3DB7CE3B54D33458FDC85E54911 /* WatchdogInspector-iOS10.2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F499E43C19B35038CEF62757E8C279C /* Pods-SwiftExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A3AE211D3CCFE99CCC4EB02524AB59FB /* Pods-SwiftExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		89C2F0D7D707CA4E5E45C85CF6BF0E6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158063BD094C9B7A1837A1C7B0E3B298 /* Foundation.framework */; };
 		9106E2159DC33719B750F2E3EBEE18BE /* TWWatchdogInspectorViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 15E83E52363412515A63002D3137E1F2 /* TWWatchdogInspectorViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,11 +29,11 @@
 		9D5F878A01AABBBB902BE8653D21F30D /* TWWatchdogInspectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352A4D0EB45EBF956C9F46F236780E89 /* TWWatchdogInspectorViewController.m */; };
 		AFE800B3F9DA3D6C934A0BC9ECC1F295 /* Pods-SwiftExampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2854FE9C0216C74FD6EB816B881FEE5 /* Pods-SwiftExampleTests-dummy.m */; };
 		B4925AE7C0C8AE5D16F2BA82F6355393 /* TWWatchdogInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = A220AF910F49E397440F002785580D76 /* TWWatchdogInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE36F69231D9DD560A059BE4CF3D116A /* WatchdogInspector-tvOS10.2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA34C6355AE5B2ACB44A65FFACFCAEB /* WatchdogInspector-tvOS10.2-dummy.m */; };
+		BE36F69231D9DD560A059BE4CF3D116A /* WatchdogInspector-tvOS10.2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC98FD3015B161D088770CE33BBC8154 /* WatchdogInspector-tvOS10.2-dummy.m */; };
 		C3313B4EE62B9B2586E57E299BC176AC /* TWWatchdogInspectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352A4D0EB45EBF956C9F46F236780E89 /* TWWatchdogInspectorViewController.m */; };
 		D1CC628B69087C894E375AA80F734190 /* Pods-SwiftExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13DF2AC8CE0EB0C74EE657CD2A324608 /* Pods-SwiftExample-dummy.m */; };
 		E2522A815CD5955524B25EF635B0ED02 /* Pods-SwiftExampleTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E83590F52DAB7AF708791EAAC47942C /* Pods-SwiftExampleTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E369919B36DBCDDDB616893FCE63167B /* WatchdogInspector-iOS9.2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3F9D0A2B97B477392CAAA5165A9C08 /* WatchdogInspector-iOS9.2-dummy.m */; };
+		E369919B36DBCDDDB616893FCE63167B /* WatchdogInspector-iOS9.2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0852E5DBD1C4A27C04245E2325909C01 /* WatchdogInspector-iOS9.2-dummy.m */; };
 		E6695A7178B76D21EA914C379A745D72 /* Pods-SwiftExample_tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A6184A6568ECA3C7DFCA0ECFC9F86431 /* Pods-SwiftExample_tvOS-dummy.m */; };
 		F7E36A08CBFFF4C9B332D14529BC4803 /* TWWatchdogInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = E50720D0BAA11A8CEE199C1269791BA0 /* TWWatchdogInspector.m */; };
 		FB6D1D08499EA60C4BB8D62CFD65DC10 /* TWWatchdogInspectorViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 15E83E52363412515A63002D3137E1F2 /* TWWatchdogInspectorViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -64,68 +64,68 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0172D3DB7CE3B54D33458FDC85E54911 /* WatchdogInspector-iOS10.2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WatchdogInspector-iOS10.2-umbrella.h"; sourceTree = "<group>"; };
+		019DE141DCC974DD0F3F49A88A9FED63 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../WatchdogInspector-tvOS10.2/Info.plist"; sourceTree = "<group>"; };
+		029BC1A05FD1BADDD73377E8DECC24EB /* WatchdogInspector-iOS9.2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "WatchdogInspector-iOS9.2.xcconfig"; path = "../WatchdogInspector-iOS9.2/WatchdogInspector-iOS9.2.xcconfig"; sourceTree = "<group>"; };
+		041CE40882485DAD73A39D94D064D1D4 /* WatchdogInspector-iOS10.2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "WatchdogInspector-iOS10.2.xcconfig"; sourceTree = "<group>"; };
+		0852E5DBD1C4A27C04245E2325909C01 /* WatchdogInspector-iOS9.2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "WatchdogInspector-iOS9.2-dummy.m"; path = "../WatchdogInspector-iOS9.2/WatchdogInspector-iOS9.2-dummy.m"; sourceTree = "<group>"; };
 		09A82B716918DAD24D3D7D8E4DEE0C49 /* Pods-SwiftExample_tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftExample_tvOS-resources.sh"; sourceTree = "<group>"; };
 		09D1ECF12D89CF315F7A759097C0830B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		12E30B208221A1E2EAE4FBD91601A409 /* WatchdogInspector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WatchdogInspector.framework; path = "WatchdogInspector-iOS10.2.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13DF2AC8CE0EB0C74EE657CD2A324608 /* Pods-SwiftExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftExample-dummy.m"; sourceTree = "<group>"; };
-		14BE5D1838C9CB227B7776A0BFE874B1 /* WatchdogInspector-iOS9.2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "WatchdogInspector-iOS9.2.modulemap"; path = "../WatchdogInspector-iOS9.2/WatchdogInspector-iOS9.2.modulemap"; sourceTree = "<group>"; };
 		158063BD094C9B7A1837A1C7B0E3B298 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		15E83E52363412515A63002D3137E1F2 /* TWWatchdogInspectorViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TWWatchdogInspectorViewController.h; path = Classes/TWWatchdogInspectorViewController.h; sourceTree = "<group>"; };
-		20D582BE2E25D505DA3B65470F154669 /* WatchdogInspector-iOS9.2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "WatchdogInspector-iOS9.2.xcconfig"; path = "../WatchdogInspector-iOS9.2/WatchdogInspector-iOS9.2.xcconfig"; sourceTree = "<group>"; };
+		1613E8030A5DB266BFF777357C9AA7BF /* WatchdogInspector-tvOS10.2-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WatchdogInspector-tvOS10.2-prefix.pch"; path = "../WatchdogInspector-tvOS10.2/WatchdogInspector-tvOS10.2-prefix.pch"; sourceTree = "<group>"; };
 		2335BD9AA519A52CAE0B7078E6023951 /* Pods-SwiftExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftExample-resources.sh"; sourceTree = "<group>"; };
-		2A5F144B864F585B183EF48075917D28 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31426F41DC743C7DA77EBE94654FF2FD /* Pods-SwiftExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		343E783AA869DB3755A91A310FDD5449 /* WatchdogInspector-iOS10.2-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WatchdogInspector-iOS10.2-prefix.pch"; sourceTree = "<group>"; };
 		346E38712B9C4436A7D9C67546581733 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		352A4D0EB45EBF956C9F46F236780E89 /* TWWatchdogInspectorViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TWWatchdogInspectorViewController.m; path = Classes/TWWatchdogInspectorViewController.m; sourceTree = "<group>"; };
-		472525A009E011A148CE0133A13B0E51 /* WatchdogInspector-tvOS10.2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WatchdogInspector-tvOS10.2-umbrella.h"; path = "../WatchdogInspector-tvOS10.2/WatchdogInspector-tvOS10.2-umbrella.h"; sourceTree = "<group>"; };
-		486237D45F148B1B5B529D9AE3897468 /* WatchdogInspector-iOS10.2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WatchdogInspector-iOS10.2-dummy.m"; sourceTree = "<group>"; };
+		4AFDA40AE03AB511E11826B5A30271D1 /* WatchdogInspector-iOS9.2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "WatchdogInspector-iOS9.2.modulemap"; path = "../WatchdogInspector-iOS9.2/WatchdogInspector-iOS9.2.modulemap"; sourceTree = "<group>"; };
 		4CCA63DDF87CDDBF29159ED185EAADD5 /* Pods-SwiftExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4D461DB5779E4783BD935126ED88D759 /* Pods_SwiftExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftExample.framework; path = "Pods-SwiftExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6B66CDC431C666FCD979E0FF4F01F6 /* Pods-SwiftExample_tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftExample_tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		51423F8F2EC53BE66146A29BD6E561E7 /* Pods-SwiftExample_tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftExample_tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5E83590F52DAB7AF708791EAAC47942C /* Pods-SwiftExampleTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftExampleTests-umbrella.h"; sourceTree = "<group>"; };
-		6B33349F575FDDEF59626EB9A6114C25 /* Pods_SwiftExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftExampleTests.framework; path = "Pods-SwiftExampleTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B624FE5C1226CA49C4C613004D4D233 /* WatchdogInspector-iOS10.2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WatchdogInspector-iOS10.2-umbrella.h"; sourceTree = "<group>"; };
+		66C5193A001BDA08D59B8765EE72783F /* Pods_SwiftExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftExampleTests.framework; path = "Pods-SwiftExampleTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7078DD1A655D8DC94C5457DAD53A0313 /* Pods_SwiftExample_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftExample_tvOS.framework; path = "Pods-SwiftExample_tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7279BF4BFDEC982DB398FA8EED072D1D /* Pods-SwiftExample_tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftExample_tvOS.modulemap"; sourceTree = "<group>"; };
-		78E60305A11FBA9AAEE6ABB9F092790A /* WatchdogInspector-iOS9.2-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WatchdogInspector-iOS9.2-prefix.pch"; path = "../WatchdogInspector-iOS9.2/WatchdogInspector-iOS9.2-prefix.pch"; sourceTree = "<group>"; };
+		7868B233A37DCDE8239B3CC86B1CB6B6 /* WatchdogInspector-iOS9.2-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WatchdogInspector-iOS9.2-prefix.pch"; path = "../WatchdogInspector-iOS9.2/WatchdogInspector-iOS9.2-prefix.pch"; sourceTree = "<group>"; };
+		7E7D1282BE4B5CD123BB1B76F22CB460 /* WatchdogInspector-tvOS10.2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "WatchdogInspector-tvOS10.2.xcconfig"; path = "../WatchdogInspector-tvOS10.2/WatchdogInspector-tvOS10.2.xcconfig"; sourceTree = "<group>"; };
 		7F236235F388279E1B2AA0796D8D716A /* Pods-SwiftExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftExample-frameworks.sh"; sourceTree = "<group>"; };
 		8348C2C1FD3A704C08AB7489398D1432 /* Pods-SwiftExample_tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftExample_tvOS-umbrella.h"; sourceTree = "<group>"; };
 		8645D0192451539A0E09B7A80A7B07D7 /* Pods-SwiftExampleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftExampleTests.modulemap"; sourceTree = "<group>"; };
+		8C0803BA93AA5B7BC855840BCD2EB482 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../WatchdogInspector-iOS9.2/Info.plist"; sourceTree = "<group>"; };
 		920F392680FE8A83A586FA1695F6F942 /* Pods-SwiftExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		943579422C26986B7D461DD623887BEF /* WatchdogInspector-tvOS10.2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "WatchdogInspector-tvOS10.2.xcconfig"; path = "../WatchdogInspector-tvOS10.2/WatchdogInspector-tvOS10.2.xcconfig"; sourceTree = "<group>"; };
+		98B9F58C84BF98286625EFA6AA41462F /* WatchdogInspector-iOS9.2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WatchdogInspector-iOS9.2-umbrella.h"; path = "../WatchdogInspector-iOS9.2/WatchdogInspector-iOS9.2-umbrella.h"; sourceTree = "<group>"; };
 		9A5C4221358F60147A363EE7CF91B975 /* Pods-SwiftExample_tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftExample_tvOS-frameworks.sh"; sourceTree = "<group>"; };
-		9A6075F241D073D10CC1D34CF5B79A20 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../WatchdogInspector-iOS9.2/Info.plist"; sourceTree = "<group>"; };
-		A06CD7460BA1FAE9539882CD2C2E014F /* WatchdogInspector-iOS9.2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WatchdogInspector-iOS9.2-umbrella.h"; path = "../WatchdogInspector-iOS9.2/WatchdogInspector-iOS9.2-umbrella.h"; sourceTree = "<group>"; };
+		9A8766B858D99C1DD17C0131A932AB5B /* WatchdogInspector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WatchdogInspector.framework; path = "WatchdogInspector-tvOS10.2.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D7688683BE81C98A78D9625C673A7E3 /* WatchdogInspector-tvOS10.2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "WatchdogInspector-tvOS10.2.modulemap"; path = "../WatchdogInspector-tvOS10.2/WatchdogInspector-tvOS10.2.modulemap"; sourceTree = "<group>"; };
 		A220AF910F49E397440F002785580D76 /* TWWatchdogInspector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TWWatchdogInspector.h; path = Classes/TWWatchdogInspector.h; sourceTree = "<group>"; };
 		A3AE211D3CCFE99CCC4EB02524AB59FB /* Pods-SwiftExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftExample-umbrella.h"; sourceTree = "<group>"; };
 		A56D1E9B17A24A9FFEACFD68722CE44E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6184A6568ECA3C7DFCA0ECFC9F86431 /* Pods-SwiftExample_tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftExample_tvOS-dummy.m"; sourceTree = "<group>"; };
 		A6B479EE9F2A057333CF87DDC3738135 /* Pods-SwiftExample_tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftExample_tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		A933E19C108A04A42F5082E2C6D0DE3A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		AA8ACD048A392DAE50A0B40E335A6453 /* WatchdogInspector-tvOS10.2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "WatchdogInspector-tvOS10.2.modulemap"; path = "../WatchdogInspector-tvOS10.2/WatchdogInspector-tvOS10.2.modulemap"; sourceTree = "<group>"; };
-		AE03E6331897E848AEE22A68B20719CA /* WatchdogInspector-iOS10.2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "WatchdogInspector-iOS10.2.modulemap"; sourceTree = "<group>"; };
 		B958A449F83F36E39C90F079A73BAABE /* WatchdogInspector.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = WatchdogInspector.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C03B2375EB058D1110D7CD93A46C886E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../WatchdogInspector-tvOS10.2/Info.plist"; sourceTree = "<group>"; };
+		BC98FD3015B161D088770CE33BBC8154 /* WatchdogInspector-tvOS10.2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "WatchdogInspector-tvOS10.2-dummy.m"; path = "../WatchdogInspector-tvOS10.2/WatchdogInspector-tvOS10.2-dummy.m"; sourceTree = "<group>"; };
+		C6531E36ED8F1465C1FA6F58093073DD /* WatchdogInspector-tvOS10.2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WatchdogInspector-tvOS10.2-umbrella.h"; path = "../WatchdogInspector-tvOS10.2/WatchdogInspector-tvOS10.2-umbrella.h"; sourceTree = "<group>"; };
 		C70425C90E94941B0ADA16C636C1FE31 /* Pods-SwiftExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftExample.debug.xcconfig"; sourceTree = "<group>"; };
-		C705B61E07E93C378B59A2F82E1E4812 /* WatchdogInspector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WatchdogInspector.framework; path = "WatchdogInspector-iOS9.2.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9DB0F00CE5978ECD0276A985CEE55A6 /* Pods_SwiftExample_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftExample_tvOS.framework; path = "Pods-SwiftExample_tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB3F9D0A2B97B477392CAAA5165A9C08 /* WatchdogInspector-iOS9.2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "WatchdogInspector-iOS9.2-dummy.m"; path = "../WatchdogInspector-iOS9.2/WatchdogInspector-iOS9.2-dummy.m"; sourceTree = "<group>"; };
 		D2854FE9C0216C74FD6EB816B881FEE5 /* Pods-SwiftExampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftExampleTests-dummy.m"; sourceTree = "<group>"; };
 		D601E8636894720525D7F372B496F573 /* Pods-SwiftExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftExample-acknowledgements.plist"; sourceTree = "<group>"; };
-		D67D4A53EB3814E19E5F9DE8026C6478 /* WatchdogInspector-iOS10.2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "WatchdogInspector-iOS10.2.xcconfig"; sourceTree = "<group>"; };
+		D67FBA9A1FC5BE9519FD7410B86400FD /* WatchdogInspector-iOS10.2-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WatchdogInspector-iOS10.2-prefix.pch"; sourceTree = "<group>"; };
 		D975E20C9245B2A685A734EC88E3738C /* Pods-SwiftExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftExample.release.xcconfig"; sourceTree = "<group>"; };
 		E37204F2836ECA00D98E17C7B4B93B95 /* Pods-SwiftExampleTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftExampleTests-resources.sh"; sourceTree = "<group>"; };
+		E3AD86F43DFDB237BC85F52AA2999499 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E50720D0BAA11A8CEE199C1269791BA0 /* TWWatchdogInspector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TWWatchdogInspector.m; path = Classes/TWWatchdogInspector.m; sourceTree = "<group>"; };
-		E8A5826F5384A57F5858505905D268D3 /* WatchdogInspector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WatchdogInspector.framework; path = "WatchdogInspector-tvOS10.2.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDA278855135FDA4AEA5925B19B2F623 /* WatchdogInspector-tvOS10.2-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WatchdogInspector-tvOS10.2-prefix.pch"; path = "../WatchdogInspector-tvOS10.2/WatchdogInspector-tvOS10.2-prefix.pch"; sourceTree = "<group>"; };
+		E6B5B91B3AE8A3499010A697B1890A3F /* WatchdogInspector-iOS10.2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "WatchdogInspector-iOS10.2.modulemap"; sourceTree = "<group>"; };
+		E8252D9555F7F79E67952E4B78F4BDC0 /* WatchdogInspector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WatchdogInspector.framework; path = "WatchdogInspector-iOS10.2.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2AD0DC2E5885493CC8A86B453E24779 /* WatchdogInspector-iOS10.2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WatchdogInspector-iOS10.2-dummy.m"; sourceTree = "<group>"; };
 		F364A82AA940B7D8A7C0261E33548D2F /* Pods-SwiftExampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftExampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		F5CC8FC0935835B2A583EB6360CBD01D /* Pods_SwiftExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftExample.framework; path = "Pods-SwiftExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F64D009C83364EB7655AFAF7C4A2CB30 /* Pods-SwiftExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftExample.modulemap"; sourceTree = "<group>"; };
 		F89AB0E40F1C352AE02539893C1E1EEA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F98F2C8FE412655F92737068F486B122 /* Pods-SwiftExample_tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftExample_tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F9FEE68DD40BE10CFAAB6FBB98ECB855 /* Pods-SwiftExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		FBA34C6355AE5B2ACB44A65FFACFCAEB /* WatchdogInspector-tvOS10.2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "WatchdogInspector-tvOS10.2-dummy.m"; path = "../WatchdogInspector-tvOS10.2/WatchdogInspector-tvOS10.2-dummy.m"; sourceTree = "<group>"; };
+		FB03D6EDFA1E555049CD4EACE086E77A /* WatchdogInspector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WatchdogInspector.framework; path = "WatchdogInspector-iOS9.2.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC79E13ABA9357B17DBD69123CB4D7C4 /* Pods-SwiftExampleTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftExampleTests-frameworks.sh"; sourceTree = "<group>"; };
 		FDE937F70D5DBF1A7F09641FDCE20931 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -182,15 +182,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		19496B204D307788BBD8EA4E87C56895 /* Products */ = {
+		1C7B34164A2E89EE5009FC10CF8225A7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F5CC8FC0935835B2A583EB6360CBD01D /* Pods_SwiftExample.framework */,
-				C9DB0F00CE5978ECD0276A985CEE55A6 /* Pods_SwiftExample_tvOS.framework */,
-				6B33349F575FDDEF59626EB9A6114C25 /* Pods_SwiftExampleTests.framework */,
-				E8A5826F5384A57F5858505905D268D3 /* WatchdogInspector.framework */,
-				C705B61E07E93C378B59A2F82E1E4812 /* WatchdogInspector.framework */,
-				12E30B208221A1E2EAE4FBD91601A409 /* WatchdogInspector.framework */,
+				4D461DB5779E4783BD935126ED88D759 /* Pods_SwiftExample.framework */,
+				7078DD1A655D8DC94C5457DAD53A0313 /* Pods_SwiftExample_tvOS.framework */,
+				66C5193A001BDA08D59B8765EE72783F /* Pods_SwiftExampleTests.framework */,
+				E8252D9555F7F79E67952E4B78F4BDC0 /* WatchdogInspector.framework */,
+				FB03D6EDFA1E555049CD4EACE086E77A /* WatchdogInspector.framework */,
+				9A8766B858D99C1DD17C0131A932AB5B /* WatchdogInspector.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -237,7 +237,7 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				51FA237B84EA7DC864318B5E72B448B6 /* Development Pods */,
 				A42F72DC1D780481325DD00969B19BB6 /* Frameworks */,
-				19496B204D307788BBD8EA4E87C56895 /* Products */,
+				1C7B34164A2E89EE5009FC10CF8225A7 /* Products */,
 				705C06F5185B5785E92BAB1B5AC9B947 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -259,6 +259,32 @@
 			name = tvOS;
 			sourceTree = "<group>";
 		};
+		CB963C24EFEC2F844021546DF8924697 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C0803BA93AA5B7BC855840BCD2EB482 /* Info.plist */,
+				019DE141DCC974DD0F3F49A88A9FED63 /* Info.plist */,
+				E3AD86F43DFDB237BC85F52AA2999499 /* Info.plist */,
+				E6B5B91B3AE8A3499010A697B1890A3F /* WatchdogInspector-iOS10.2.modulemap */,
+				041CE40882485DAD73A39D94D064D1D4 /* WatchdogInspector-iOS10.2.xcconfig */,
+				F2AD0DC2E5885493CC8A86B453E24779 /* WatchdogInspector-iOS10.2-dummy.m */,
+				D67FBA9A1FC5BE9519FD7410B86400FD /* WatchdogInspector-iOS10.2-prefix.pch */,
+				0172D3DB7CE3B54D33458FDC85E54911 /* WatchdogInspector-iOS10.2-umbrella.h */,
+				4AFDA40AE03AB511E11826B5A30271D1 /* WatchdogInspector-iOS9.2.modulemap */,
+				029BC1A05FD1BADDD73377E8DECC24EB /* WatchdogInspector-iOS9.2.xcconfig */,
+				0852E5DBD1C4A27C04245E2325909C01 /* WatchdogInspector-iOS9.2-dummy.m */,
+				7868B233A37DCDE8239B3CC86B1CB6B6 /* WatchdogInspector-iOS9.2-prefix.pch */,
+				98B9F58C84BF98286625EFA6AA41462F /* WatchdogInspector-iOS9.2-umbrella.h */,
+				9D7688683BE81C98A78D9625C673A7E3 /* WatchdogInspector-tvOS10.2.modulemap */,
+				7E7D1282BE4B5CD123BB1B76F22CB460 /* WatchdogInspector-tvOS10.2.xcconfig */,
+				BC98FD3015B161D088770CE33BBC8154 /* WatchdogInspector-tvOS10.2-dummy.m */,
+				1613E8030A5DB266BFF777357C9AA7BF /* WatchdogInspector-tvOS10.2-prefix.pch */,
+				C6531E36ED8F1465C1FA6F58093073DD /* WatchdogInspector-tvOS10.2-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "SwiftExample/Pods/Target Support Files/WatchdogInspector-iOS10.2";
+			sourceTree = "<group>";
+		};
 		CC174B4C187A0164F2833A21E65DFDD8 /* WatchdogInspector */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,7 +293,7 @@
 				15E83E52363412515A63002D3137E1F2 /* TWWatchdogInspectorViewController.h */,
 				352A4D0EB45EBF956C9F46F236780E89 /* TWWatchdogInspectorViewController.m */,
 				3999FF1C9A10DB487FB62D1D176A4CEC /* Pod */,
-				F5DC23A843A1DD571C0A7F878788FF48 /* Support Files */,
+				CB963C24EFEC2F844021546DF8924697 /* Support Files */,
 			);
 			name = WatchdogInspector;
 			path = ../..;
@@ -325,32 +351,6 @@
 			);
 			name = "Pods-SwiftExampleTests";
 			path = "Target Support Files/Pods-SwiftExampleTests";
-			sourceTree = "<group>";
-		};
-		F5DC23A843A1DD571C0A7F878788FF48 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9A6075F241D073D10CC1D34CF5B79A20 /* Info.plist */,
-				2A5F144B864F585B183EF48075917D28 /* Info.plist */,
-				C03B2375EB058D1110D7CD93A46C886E /* Info.plist */,
-				AE03E6331897E848AEE22A68B20719CA /* WatchdogInspector-iOS10.2.modulemap */,
-				D67D4A53EB3814E19E5F9DE8026C6478 /* WatchdogInspector-iOS10.2.xcconfig */,
-				486237D45F148B1B5B529D9AE3897468 /* WatchdogInspector-iOS10.2-dummy.m */,
-				343E783AA869DB3755A91A310FDD5449 /* WatchdogInspector-iOS10.2-prefix.pch */,
-				6B624FE5C1226CA49C4C613004D4D233 /* WatchdogInspector-iOS10.2-umbrella.h */,
-				14BE5D1838C9CB227B7776A0BFE874B1 /* WatchdogInspector-iOS9.2.modulemap */,
-				20D582BE2E25D505DA3B65470F154669 /* WatchdogInspector-iOS9.2.xcconfig */,
-				CB3F9D0A2B97B477392CAAA5165A9C08 /* WatchdogInspector-iOS9.2-dummy.m */,
-				78E60305A11FBA9AAEE6ABB9F092790A /* WatchdogInspector-iOS9.2-prefix.pch */,
-				A06CD7460BA1FAE9539882CD2C2E014F /* WatchdogInspector-iOS9.2-umbrella.h */,
-				AA8ACD048A392DAE50A0B40E335A6453 /* WatchdogInspector-tvOS10.2.modulemap */,
-				943579422C26986B7D461DD623887BEF /* WatchdogInspector-tvOS10.2.xcconfig */,
-				FBA34C6355AE5B2ACB44A65FFACFCAEB /* WatchdogInspector-tvOS10.2-dummy.m */,
-				EDA278855135FDA4AEA5925B19B2F623 /* WatchdogInspector-tvOS10.2-prefix.pch */,
-				472525A009E011A148CE0133A13B0E51 /* WatchdogInspector-tvOS10.2-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "SwiftExample/Pods/Target Support Files/WatchdogInspector-iOS10.2";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,7 +428,7 @@
 			);
 			name = "Pods-SwiftExample_tvOS";
 			productName = "Pods-SwiftExample_tvOS";
-			productReference = C9DB0F00CE5978ECD0276A985CEE55A6 /* Pods_SwiftExample_tvOS.framework */;
+			productReference = 7078DD1A655D8DC94C5457DAD53A0313 /* Pods_SwiftExample_tvOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		5AC72EB58AB838B485C30AF0E2848A09 /* Pods-SwiftExampleTests */ = {
@@ -446,7 +446,7 @@
 			);
 			name = "Pods-SwiftExampleTests";
 			productName = "Pods-SwiftExampleTests";
-			productReference = 6B33349F575FDDEF59626EB9A6114C25 /* Pods_SwiftExampleTests.framework */;
+			productReference = 66C5193A001BDA08D59B8765EE72783F /* Pods_SwiftExampleTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B914E53B90B09EA66C94149047E823E3 /* WatchdogInspector-tvOS10.2 */ = {
@@ -463,7 +463,7 @@
 			);
 			name = "WatchdogInspector-tvOS10.2";
 			productName = "WatchdogInspector-tvOS10.2";
-			productReference = E8A5826F5384A57F5858505905D268D3 /* WatchdogInspector.framework */;
+			productReference = 9A8766B858D99C1DD17C0131A932AB5B /* WatchdogInspector.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C9C566A1BDBBF79C10135D5580619F6D /* WatchdogInspector-iOS10.2 */ = {
@@ -480,7 +480,7 @@
 			);
 			name = "WatchdogInspector-iOS10.2";
 			productName = "WatchdogInspector-iOS10.2";
-			productReference = 12E30B208221A1E2EAE4FBD91601A409 /* WatchdogInspector.framework */;
+			productReference = E8252D9555F7F79E67952E4B78F4BDC0 /* WatchdogInspector.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D0D06D9A8126779069D11585C5885319 /* WatchdogInspector-iOS9.2 */ = {
@@ -497,7 +497,7 @@
 			);
 			name = "WatchdogInspector-iOS9.2";
 			productName = "WatchdogInspector-iOS9.2";
-			productReference = C705B61E07E93C378B59A2F82E1E4812 /* WatchdogInspector.framework */;
+			productReference = FB03D6EDFA1E555049CD4EACE086E77A /* WatchdogInspector.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E447B2FB5F8E80ED7CE733A0D1AFCD40 /* Pods-SwiftExample */ = {
@@ -515,7 +515,7 @@
 			);
 			name = "Pods-SwiftExample";
 			productName = "Pods-SwiftExample";
-			productReference = F5CC8FC0935835B2A583EB6360CBD01D /* Pods_SwiftExample.framework */;
+			productReference = 4D461DB5779E4783BD935126ED88D759 /* Pods_SwiftExample.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -535,7 +535,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 19496B204D307788BBD8EA4E87C56895 /* Products */;
+			productRefGroup = 1C7B34164A2E89EE5009FC10CF8225A7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -821,7 +821,7 @@
 		};
 		7F3387CACAA89D4809B24F1D9CDD8178 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D67D4A53EB3814E19E5F9DE8026C6478 /* WatchdogInspector-iOS10.2.xcconfig */;
+			baseConfigurationReference = 041CE40882485DAD73A39D94D064D1D4 /* WatchdogInspector-iOS10.2.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -853,7 +853,7 @@
 		};
 		9CB2F1B21235337ED02F4B7B7AC6AD8D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 943579422C26986B7D461DD623887BEF /* WatchdogInspector-tvOS10.2.xcconfig */;
+			baseConfigurationReference = 7E7D1282BE4B5CD123BB1B76F22CB460 /* WatchdogInspector-tvOS10.2.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -885,7 +885,7 @@
 		};
 		9E7AAA621D40A41F0DA0F5E9C737356D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20D582BE2E25D505DA3B65470F154669 /* WatchdogInspector-iOS9.2.xcconfig */;
+			baseConfigurationReference = 029BC1A05FD1BADDD73377E8DECC24EB /* WatchdogInspector-iOS9.2.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1052,7 +1052,7 @@
 		};
 		EE11777E830B739FADB86BFBA8121FF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20D582BE2E25D505DA3B65470F154669 /* WatchdogInspector-iOS9.2.xcconfig */;
+			baseConfigurationReference = 029BC1A05FD1BADDD73377E8DECC24EB /* WatchdogInspector-iOS9.2.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1083,7 +1083,7 @@
 		};
 		FC1C3EAF4097CA03C1DC6A4B7C7A3D12 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 943579422C26986B7D461DD623887BEF /* WatchdogInspector-tvOS10.2.xcconfig */;
+			baseConfigurationReference = 7E7D1282BE4B5CD123BB1B76F22CB460 /* WatchdogInspector-tvOS10.2.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1114,7 +1114,7 @@
 		};
 		FE6C6EA02885DDA94A1B073CE1E959F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D67D4A53EB3814E19E5F9DE8026C6478 /* WatchdogInspector-iOS10.2.xcconfig */;
+			baseConfigurationReference = 041CE40882485DAD73A39D94D064D1D4 /* WatchdogInspector-iOS10.2.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
