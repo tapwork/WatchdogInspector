@@ -49,8 +49,6 @@
 		BD8A2BE4575692F551310824 /* Pods_SwiftExample_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftExample_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDBB5E80011649238DD4C434 /* Pods-SwiftExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftExampleTests/Pods-SwiftExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D15DD9C7211C67B3007E85A5 /* SwiftExample_tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExample_tvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D15DD9C9211C67B4007E85A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D15DD9CB211C67B4007E85A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D15DD9CE211C67B4007E85A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D15DD9D0211C67B5007E85A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D15DD9D2211C67B5007E85A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -159,8 +157,6 @@
 		D15DD9C8211C67B4007E85A5 /* tvOS Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D15DD9C9211C67B4007E85A5 /* AppDelegate.swift */,
-				D15DD9CB211C67B4007E85A5 /* ViewController.swift */,
 				D15DD9CD211C67B4007E85A5 /* Main.storyboard */,
 				D15DD9D0211C67B5007E85A5 /* Assets.xcassets */,
 				D15DD9D2211C67B5007E85A5 /* Info.plist */,
