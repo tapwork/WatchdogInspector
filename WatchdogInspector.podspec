@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
     :tag => s.version.to_s
   }
   s.ios.deployment_target = '8.0'
+  s.tvos.deployment_target = '10.2'
   s.source_files = 'Classes/**.{h,m}'
   s.requires_arc = true
 end
