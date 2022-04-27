@@ -22,7 +22,7 @@ To detect unwanted main thread stalls you can set a custom watchdog timeout.
 
 ## Install
 #### CocoaPods
-```
+```ruby
 pod "WatchdogInspector"
 ```
 and run `pod install`
@@ -48,7 +48,7 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
         return true
 }
 ```
-####Stop
+#### Stop
 To stop it just call
 ```Swift
 TWWatchdogInspector.stop()
@@ -62,7 +62,7 @@ You could also disable the Main Thread exceptions
 ```Swift
 TWWatchdogInspector.setEnableMainthreadStallingException(false)
 ```
-####Logging
+#### Logging
 To log all measured framerates you can log them in the console by calling (Default: on)
 ```Swift
 TWWatchdogInspector.setUseLogs(true)
