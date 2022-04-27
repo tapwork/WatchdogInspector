@@ -22,7 +22,7 @@ To detect unwanted main thread stalls you can set a custom watchdog timeout.
 
 ## Install
 #### CocoaPods
-```
+```ruby
 pod "WatchdogInspector"
 ```
 and run `pod install`
@@ -48,7 +48,7 @@ Start `WatchdogInspector` after launch or whenever you want.
 }
 ```
 
-####Stop
+#### Stop
 To stop it just call
 ```Objective-C
 [TWWatchdogInspector stop]
@@ -63,7 +63,7 @@ You could also disable the Main Thread exceptions
 [TWWatchdogInspector setEnableMainthreadStallingException:NO];
 ```
 
-####Logging
+#### Logging
 To log all measured framerates you can log them in the console by calling (Default: on)
 ```Objective-C
 [TWWatchdogInspector setUseLogs:YES];
